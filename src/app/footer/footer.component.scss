@@ -1,14 +1,23 @@
 @import "../app.component.scss";
 
-$footerHeight: 25vw;
+$footerHeight: 20vw;
 $footerBackgroundColor: #15161a;
 $footerBorderColor: #0a0b0d;
 $borderWidth: 3px;
+$itemsLefrRightMargin: 3em;
+$cssAwesomeDimention: 12vw;
+$cssAwesomeBorderWidth: 2px;
+$cssAwesomeColor: #2c2d32;
+$hoverBorderColor: #b18d5d;
+$hoverFontColor: #a4a8b4;
 
 .footer {
     &__display {
         height: $footerHeight;
         width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 
     &__position {}
@@ -16,5 +25,67 @@ $borderWidth: 3px;
     &__view {
         background-color: $footerBackgroundColor;
         border-top: $borderWidth solid $footerBorderColor;
+    }
+
+    .css-is-awesome {
+        &__display {
+            left: $itemsLefrRightMargin;
+            display: flex;
+            align-items: center;
+        }
+
+        &__position {
+            position: relative;
+        }
+
+        &__view {
+            width: $cssAwesomeDimention;
+            height: $cssAwesomeDimention;
+            border: $cssAwesomeBorderWidth solid $cssAwesomeColor;
+        }
+
+        &:hover {
+            border-color: $hoverBorderColor;
+            rotate: 360deg;
+            transition: rotate 1s;
+        }
+
+    }
+
+    .css-is-awesome-text {
+        &__display {
+            left: 0;
+        }
+
+        &__position {
+            position: absolute;
+        }
+
+        &__view {
+            text-transform: uppercase;
+            padding-left: calc(calc($cssAwesomeDimention / 17) + 1em);
+            font-size: calc($cssAwesomeDimention / 4);
+            color: $cssAwesomeColor;
+        }
+
+        &:hover {
+            color: $hoverFontColor;
+        }
+    }
+
+    .nabthat {
+        &__display {}
+
+        &__position {}
+
+        &__view {}
+    }
+
+    .show-button {
+        &__display {}
+
+        &__position {}
+
+        &__view {}
     }
 }
