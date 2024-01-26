@@ -1,10 +1,143 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans");
+app-root {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100vh;
+}
+
 body {
-  font-family: "Open Sans", sans-serif;
   margin: 0;
+  font-family: "Open Sans", sans-serif;
 }
 
 a {
   text-decoration: none;
   color: #fff;
+}
+
+app-root {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100vh;
+}
+
+body {
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.header__display {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.header__position {
+  height: 22vw;
+  width: 100%;
+}
+.header__view {
+  background-color: #0b0c10;
+}
+.header .header-logo__display {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 1.4em;
+  height: 1.3em;
+}
+.header .header-logo__position {
+  padding-top: 0.1em;
+  margin-left: 0.3em;
+}
+.header .header-logo__view {
+  background-color: #303030;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 5em;
+}
+.header .header-logo__view:hover {
+  background-color: #e78301;
+}
+.header .header-title__position {
+  right: 2em;
+  position: absolute;
+}
+.header .header-title__view {
+  color: #fff;
+  text-align: right;
+}
+.header .header-title .header-title-text__position {
+  margin: 0;
+}
+.header .header-title .user-name__display {
+  display: none;
+}
+app-root {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100vh;
+}
+
+body {
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.footer__display {
+  height: 25vw;
+  width: 100%;
+}
+.footer__view {
+  background-color: #15161a;
+  border-top: 1px solid #0a0b0d;
+}
+
+.main-content {
+  background-color: #2a2d36;
+  min-height: calc(100vh - 22vw - 25vw - 1px);
 }

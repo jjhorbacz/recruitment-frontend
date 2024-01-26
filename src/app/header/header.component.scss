@@ -3,10 +3,10 @@
 $headerHeight: 22vw;
 $headerBackgroundColor: #0b0c10;
 $headerIconColor: #fff;
-$headerIconSize: 5em;
+$headerIconSize: 11vw;
 $headerIconBackground: #303030;
-$headerIconWidth: 1.4em;
-$headerIconHeight: 1.3em;
+$headerIconWidth: 15vw;
+$headerIconHeight: 14vw;
 $headerIconMarginLeft: 0.3em;
 
 .header {
@@ -17,8 +17,6 @@ $headerIconMarginLeft: 0.3em;
     }
 
     &__position {
-        position: absolute;
-        top: 0;
         height: $headerHeight;
         width: 100%;
     }
@@ -75,7 +73,9 @@ $headerIconMarginLeft: 0.3em;
                 margin: 0;
             }
 
-            &__view {}
+            &__view {
+                font-size: 3vw;
+            }
 
         }
 

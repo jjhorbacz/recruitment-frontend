@@ -1,1 +1,11 @@
 @import "../app.component.scss";
+@import "../header/header.component.scss";
+@import "../footer/footer.component.scss";
+
+$contentBackgroundColor: #2a2d36;
+$contentMarginBottom: $footerHeight;
+
+.main-content {
+    background-color: $contentBackgroundColor;
+    min-height: calc(100vh - $headerHeight - $footerHeight - $borderWidth);
+}

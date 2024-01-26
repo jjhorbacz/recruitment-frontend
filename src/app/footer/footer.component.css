@@ -1,10 +1,33 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans");
+app-root {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100vh;
+}
+
 body {
-  font-family: "Open Sans", sans-serif;
   margin: 0;
+  font-family: "Open Sans", sans-serif;
 }
 
 a {
   text-decoration: none;
   color: #fff;
+}
+
+.footer__display {
+  height: 25vw;
+  width: 100%;
+}
+.footer__view {
+  background-color: #15161a;
+  border-top: 3px solid #0a0b0d;
 }

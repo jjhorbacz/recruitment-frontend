@@ -4,9 +4,16 @@ $mainFont: 'Open Sans', sans-serif;
 $mainFontColor: #fff;
 $secondFontColor: #a3a8b5;
 
+app-root {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+}
+
 body {
-    font-family: $mainFont;
     margin: 0;
+    font-family: $mainFont;
 }
 
 a {
