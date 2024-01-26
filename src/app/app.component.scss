@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans');
+
+$mainFont: 'Open Sans', sans-serif;
+$mainFontColor: #fff;
+$secondFontColor: #a3a8b5;
+$footerHeight: 30vw;
+
+body {
+    font-family: $mainFont;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: $mainFontColor;
+}

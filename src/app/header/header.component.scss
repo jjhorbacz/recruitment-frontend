@@ -1,0 +1,90 @@
+@import "../app.component.scss";
+
+$headerHeight: 22vw;
+$headerBackgroundColor: #0b0c10;
+$headerIconColor: #fff;
+$headerIconSize: 5em;
+$headerIconBackground: #303030;
+$headerIconWidth: 1.4em;
+$headerIconHeight: 1.3em;
+$headerIconMarginLeft: 0.3em;
+
+.header {
+
+    &__display {
+        display: flex;
+        align-items: center;
+    }
+
+    &__position {
+        position: absolute;
+        top: 0;
+        height: $headerHeight;
+        width: 100%;
+    }
+
+    &__view {
+        background-color: $headerBackgroundColor;
+    }
+
+    .header-logo {
+
+        &__display {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: $headerIconWidth;
+            height: $headerIconHeight;
+        }
+
+        &__position {
+            padding-top: calc($headerIconWidth - $headerIconHeight);
+            margin-left: $headerIconMarginLeft;
+        }
+
+        &__view {
+            background-color: $headerIconBackground;
+            border-radius: 50%;
+            color: $headerIconColor;
+            font-size: $headerIconSize;
+        }
+    }
+
+    .header-title {
+        &__display {}
+
+        &__position {
+            right: 2em;
+            position: absolute;
+        }
+
+        &__view {
+            color: $mainFontColor;
+            text-align: right;
+        }
+
+        .header-title-text {
+
+            &__display {}
+
+            &__position {
+                margin: 0;
+            }
+
+            &__view {}
+
+        }
+
+        .user-name {
+
+            &__display {
+                display: none;
+            }
+
+            &__position {}
+
+            &__view {}
+        }
+
+    }
+}
