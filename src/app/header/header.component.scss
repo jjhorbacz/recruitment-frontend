@@ -47,6 +47,10 @@ $headerIconMarginLeft: 0.3em;
             border-radius: 50%;
             color: $headerIconColor;
             font-size: $headerIconSize;
+
+            &:hover {
+                background-color: #e78301;
+            }
         }
     }
 

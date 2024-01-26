@@ -49,6 +49,9 @@ a {
   color: #fff;
   font-size: 5em;
 }
+.header .header-logo__view:hover {
+  background-color: #e78301;
+}
 .header .header-title__position {
   right: 2em;
   position: absolute;
