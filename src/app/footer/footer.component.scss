@@ -4,7 +4,7 @@ $footerHeight: 20vw;
 $footerBackgroundColor: #15161a;
 $footerBorderColor: #0a0b0d;
 $borderWidth: 3px;
-$itemsLefrRightMargin: 3em;
+$itemsLefrRightMargin: 3vw;
 $cssAwesomeDimention: 12vw;
 $cssAwesomeBorderWidth: 2px;
 $cssAwesomeColor: #2c2d32;
@@ -36,6 +36,7 @@ $hoverFontColor: #a4a8b4;
 
         &__position {
             position: relative;
+            z-index: 1;
         }
 
         &__view {
@@ -48,6 +49,11 @@ $hoverFontColor: #a4a8b4;
             border-color: $hoverBorderColor;
             rotate: 360deg;
             transition: rotate 1s;
+            cursor: pointer;
+        }
+
+        &:hover~.css-is-awesome-text {
+            color: $hoverFontColor;
         }
 
     }
@@ -66,10 +72,6 @@ $hoverFontColor: #a4a8b4;
             padding-left: calc(calc($cssAwesomeDimention / 17) + 1em);
             font-size: calc($cssAwesomeDimention / 4);
             color: $cssAwesomeColor;
-        }
-
-        &:hover {
-            color: $hoverFontColor;
         }
     }
 

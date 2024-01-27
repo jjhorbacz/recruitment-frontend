@@ -41,7 +41,7 @@ a {
   border-top: 3px solid #0a0b0d;
 }
 .footer .css-is-awesome__display {
-  left: 3em;
+  left: 3vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -51,6 +51,7 @@ a {
 }
 .footer .css-is-awesome__position {
   position: relative;
+  z-index: 1;
 }
 .footer .css-is-awesome__view {
   width: 12vw;
@@ -62,6 +63,10 @@ a {
   rotate: 360deg;
   -webkit-transition: rotate 1s;
   transition: rotate 1s;
+  cursor: pointer;
+}
+.footer .css-is-awesome:hover ~ .css-is-awesome-text {
+  color: #a4a8b4;
 }
 .footer .css-is-awesome-text__display {
   left: 0;
@@ -74,7 +79,4 @@ a {
   padding-left: calc(0.7058823529vw + 1em);
   font-size: 3vw;
   color: #2c2d32;
-}
-.footer .css-is-awesome-text:hover {
-  color: #a4a8b4;
 }

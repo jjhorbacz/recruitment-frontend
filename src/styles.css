@@ -1,9 +1,25 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans");
+app-root {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100vh;
+}
+
 body {
-  font-family: "Open Sans", sans-serif;
   margin: 0;
+  font-family: "Open Sans", sans-serif;
 }
 
 a {
@@ -20,8 +36,6 @@ a {
           align-items: center;
 }
 .header__position {
-  position: absolute;
-  top: 0;
   height: 22vw;
   width: 100%;
 }
@@ -38,18 +52,21 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 1.4em;
-  height: 1.3em;
+  width: 15vw;
+  height: 14vw;
 }
 .header .header-logo__position {
-  padding-top: 0.1em;
+  padding-top: 1vw;
   margin-left: 0.3em;
 }
 .header .header-logo__view {
   background-color: #303030;
   border-radius: 50%;
   color: #fff;
-  font-size: 5em;
+  font-size: 11vw;
+}
+.header .header-logo__view:hover {
+  background-color: #e78301;
 }
 .header .header-title__position {
   right: 2em;
@@ -62,12 +79,29 @@ a {
 .header .header-title .header-title-text__position {
   margin: 0;
 }
+.header .header-title .header-title-text__view {
+  font-size: 3vw;
+}
 .header .header-title .user-name__display {
   display: none;
 }
+app-root {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100vh;
+}
+
 body {
-  font-family: "Open Sans", sans-serif;
   margin: 0;
+  font-family: "Open Sans", sans-serif;
 }
 
 a {
@@ -75,12 +109,247 @@ a {
   color: #fff;
 }
 
+.footer__display {
+  height: 20vw;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.footer__view {
+  background-color: #15161a;
+  border-top: 3px solid #0a0b0d;
+}
+.footer .css-is-awesome__display {
+  left: 3vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.footer .css-is-awesome__position {
+  position: relative;
+}
+.footer .css-is-awesome__view {
+  width: 12vw;
+  height: 12vw;
+  border: 2px solid #2c2d32;
+}
+.footer .css-is-awesome:hover {
+  border-color: #b18d5d;
+  rotate: 360deg;
+  -webkit-transition: rotate 1s;
+  transition: rotate 1s;
+}
+.footer .css-is-awesome-text__display {
+  left: 0;
+}
+.footer .css-is-awesome-text__position {
+  position: absolute;
+}
+.footer .css-is-awesome-text__view {
+  text-transform: uppercase;
+  padding-left: calc(0.7058823529vw + 1em);
+  font-size: 3vw;
+  color: #2c2d32;
+}
+.footer .css-is-awesome-text:hover {
+  color: #a4a8b4;
+}
+app-root {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100vh;
+}
+
 body {
-  font-family: "Open Sans", sans-serif;
   margin: 0;
+  font-family: "Open Sans", sans-serif;
 }
 
 a {
   text-decoration: none;
   color: #fff;
+}
+
+app-root {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100vh;
+}
+
+body {
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.header__display {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.header__position {
+  height: 22vw;
+  width: 100%;
+}
+.header__view {
+  background-color: #0b0c10;
+}
+.header .header-logo__display {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 15vw;
+  height: 14vw;
+}
+.header .header-logo__position {
+  padding-top: 1vw;
+  margin-left: 0.3em;
+}
+.header .header-logo__view {
+  background-color: #303030;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 11vw;
+}
+.header .header-logo__view:hover {
+  background-color: #e78301;
+}
+.header .header-title__position {
+  right: 2em;
+  position: absolute;
+}
+.header .header-title__view {
+  color: #fff;
+  text-align: right;
+}
+.header .header-title .header-title-text__position {
+  margin: 0;
+}
+.header .header-title .header-title-text__view {
+  font-size: 3vw;
+}
+.header .header-title .user-name__display {
+  display: none;
+}
+app-root {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100vh;
+}
+
+body {
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.footer__display {
+  height: 20vw;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.footer__view {
+  background-color: #15161a;
+  border-top: 3px solid #0a0b0d;
+}
+.footer .css-is-awesome__display {
+  left: 3vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.footer .css-is-awesome__position {
+  position: relative;
+}
+.footer .css-is-awesome__view {
+  width: 12vw;
+  height: 12vw;
+  border: 2px solid #2c2d32;
+}
+.footer .css-is-awesome:hover {
+  border-color: #b18d5d;
+  rotate: 360deg;
+  -webkit-transition: rotate 1s;
+  transition: rotate 1s;
+}
+.footer .css-is-awesome-text__display {
+  left: 0;
+}
+.footer .css-is-awesome-text__position {
+  position: absolute;
+}
+.footer .css-is-awesome-text__view {
+  text-transform: uppercase;
+  padding-left: calc(0.7058823529vw + 1em);
+  font-size: 3vw;
+  color: #2c2d32;
+}
+.footer .css-is-awesome-text:hover {
+  color: #a4a8b4;
+}
+.main-content {
+  background-color: #2a2d36;
+  min-height: calc(100vh - 22vw - 20vw - 3px);
 }

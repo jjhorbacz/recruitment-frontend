@@ -74,18 +74,18 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 1.4em;
-  height: 1.3em;
+  width: 15vw;
+  height: 14vw;
 }
 .header .header-logo__position {
-  padding-top: 0.1em;
+  padding-top: 1vw;
   margin-left: 0.3em;
 }
 .header .header-logo__view {
   background-color: #303030;
   border-radius: 50%;
   color: #fff;
-  font-size: 5em;
+  font-size: 11vw;
 }
 .header .header-logo__view:hover {
   background-color: #e78301;
@@ -100,6 +100,9 @@ a {
 }
 .header .header-title .header-title-text__position {
   margin: 0;
+}
+.header .header-title .header-title-text__view {
+  font-size: 3vw;
 }
 .header .header-title .user-name__display {
   display: none;
@@ -129,15 +132,61 @@ a {
 }
 
 .footer__display {
-  height: 25vw;
+  height: 20vw;
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .footer__view {
   background-color: #15161a;
-  border-top: 1px solid #0a0b0d;
+  border-top: 3px solid #0a0b0d;
 }
-
+.footer .css-is-awesome__display {
+  left: 3vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.footer .css-is-awesome__position {
+  position: relative;
+}
+.footer .css-is-awesome__view {
+  width: 12vw;
+  height: 12vw;
+  border: 2px solid #2c2d32;
+}
+.footer .css-is-awesome:hover {
+  border-color: #b18d5d;
+  rotate: 360deg;
+  -webkit-transition: rotate 1s;
+  transition: rotate 1s;
+}
+.footer .css-is-awesome-text__display {
+  left: 0;
+}
+.footer .css-is-awesome-text__position {
+  position: absolute;
+}
+.footer .css-is-awesome-text__view {
+  text-transform: uppercase;
+  padding-left: calc(0.7058823529vw + 1em);
+  font-size: 3vw;
+  color: #2c2d32;
+}
+.footer .css-is-awesome-text:hover {
+  color: #a4a8b4;
+}
 .main-content {
   background-color: #2a2d36;
-  min-height: calc(100vh - 22vw - 25vw - 1px);
+  min-height: calc(100vh - 22vw - 20vw - 3px);
 }
