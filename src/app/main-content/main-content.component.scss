@@ -7,5 +7,5 @@ $contentMarginBottom: $footerHeight;
 
 .main-content {
     background-color: $contentBackgroundColor;
-    min-height: calc(100vh - $headerHeight - $footerHeight - $borderWidth);
+    min-height: calc(100vh - $headerHeight - $footerHeight - $footerBorderWidth);
 }

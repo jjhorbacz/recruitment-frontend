@@ -5,6 +5,29 @@
         class="css-is-awesome-text css-is-awesome-text__display css-is-awesome-text__position css-is-awesome-text__view">
         <span>css<br>is<br>awesome</span>
     </div>
-    <div class="nabthat"></div>
-    <div class="show-button"></div>
+    <div class="nabthat nabthat__display">
+        <div class="line"></div>
+        <h2>
+            nabthat
+        </h2>
+        <div class="line"></div>
+    </div>
+    <div class="show-settings">
+
+        <button type="button" class="show-button">
+            pokaż&nbsp;<i class="fa-sharp fa-solid fa-chevron-up"></i><i class="fa-sharp fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="show-block">
+            <ul class="fa-ul">
+                <li><a (click)="resetSettings()" class="settings-text">
+                        <span class="fa-li"><i
+                                class="fa-sharp fa-solid fa-chevron-right"></i></span>zresetuj&nbsp;ustawienia
+                    </a></li>
+                <li><a (click)="showUserData()" class="settings-text">
+                        <span class="fa-li"><i
+                                class="fa-sharp fa-solid fa-chevron-right"></i></span>pokaż&nbsp;dane&nbsp;osobowe
+                    </a></li>
+            </ul>
+        </div>
+    </div>
 </div>

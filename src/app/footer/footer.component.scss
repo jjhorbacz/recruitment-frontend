@@ -3,13 +3,24 @@
 $footerHeight: 20vw;
 $footerBackgroundColor: #15161a;
 $footerBorderColor: #0a0b0d;
-$borderWidth: 3px;
-$itemsLefrRightMargin: 3vw;
-$cssAwesomeDimention: 12vw;
+$footerBorderWidth: 3px;
+$footerItemsLefrRightMargin: 3vw;
+$cssAwesomeDimention: 15vw;
 $cssAwesomeBorderWidth: 2px;
 $cssAwesomeColor: #2c2d32;
 $hoverBorderColor: #b18d5d;
 $hoverFontColor: #a4a8b4;
+$nabthatColor: #2c2d32;
+$showSettingsFontColor: #141517;
+$showSettingsHoverFontColor: #e88301;
+$showSettingsBackgroundColor: #fff;
+$buttonWidth: 45vw;
+$buttonHeight: 3vw;
+$buttonBorderColor: #2c2d32;
+$buttonBackgroundColor: #15161a;
+$buttonFontColor: #a3a9b5;
+$buttonHoverBorderColor: #fff;
+$buttonHoverFontColor: #fff;
 
 .footer {
     &__display {
@@ -18,18 +29,21 @@ $hoverFontColor: #a4a8b4;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        z-index: 2;
     }
 
-    &__position {}
+    &__position {
+        position: relative;
+    }
 
     &__view {
         background-color: $footerBackgroundColor;
-        border-top: $borderWidth solid $footerBorderColor;
+        border-top: $footerBorderWidth solid $footerBorderColor;
     }
 
     .css-is-awesome {
         &__display {
-            left: $itemsLefrRightMargin;
+            left: $footerItemsLefrRightMargin;
             display: flex;
             align-items: center;
         }
@@ -69,25 +83,134 @@ $hoverFontColor: #a4a8b4;
 
         &__view {
             text-transform: uppercase;
-            padding-left: calc(calc($cssAwesomeDimention / 17) + 1em);
-            font-size: calc($cssAwesomeDimention / 4);
+            padding-left: calc(calc($cssAwesomeDimention / 10) + $footerItemsLefrRightMargin);
+            font-size: calc($cssAwesomeDimention / 4.5);
             color: $cssAwesomeColor;
+            letter-spacing: calc($cssAwesomeDimention / 80);
         }
     }
 
     .nabthat {
+        &__display {
+            display: none;
+            flex-direction: row;
+        }
+
+        &__position {}
+
+        &__view {}
+
+        .line {
+            width: 2em;
+            height: 1px;
+            margin: auto 5px;
+            background-color: $nabthatColor;
+        }
+
+        h2 {
+            color: $nabthatColor;
+            font-weight: normal;
+        }
+
+    }
+
+    .show-settings {
+
+        margin-right: $footerItemsLefrRightMargin;
+
         &__display {}
 
         &__position {}
 
         &__view {}
+
+
+
+        .show-button {
+            width: $buttonWidth;
+            height: $buttonHeight;
+            text-transform: uppercase;
+            border: 1px solid $buttonBorderColor;
+            border-radius: 3px;
+            background-color: $buttonBackgroundColor;
+            color: $buttonFontColor;
+            font-weight: 900;
+            padding: 4vw 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+
+            .fa-chevron-down {
+                display: none;
+            }
+
+            &:hover {
+                border-color: $buttonHoverBorderColor;
+                color: $buttonHoverFontColor;
+                cursor: pointer;
+            }
+
+            &:focus~.show-block {
+                animation-name: showIt;
+                animation-duration: 1s;
+                animation-fill-mode: forwards;
+                animation-iteration-count: 1;
+                display: block;
+                z-index: -2;
+            }
+
+            &:focus {
+
+
+                &::after {
+                    content: "";
+                    width: $buttonWidth;
+                    height: calc($footerHeight + $footerBorderWidth);
+                    border-top: $footerBorderWidth solid $footerBorderColor;
+                    background-color: $footerBackgroundColor;
+                    position: absolute;
+                    z-index: -1;
+                }
+            }
+
+            @keyframes showIt {
+                from {
+                    bottom: 0;
+                }
+
+                to {
+                    bottom: calc($footerHeight + $footerBorderWidth);
+                }
+            }
+
+        }
+
+        .show-block {
+            width: $buttonWidth;
+            background-color: $showSettingsBackgroundColor;
+            color: $showSettingsFontColor;
+            list-style-image: url('https://fontawesome.com/icons/chevron-right?f=classic&s=solid');
+            text-transform: uppercase;
+            box-shadow: 0px 0px 13px 7px $footerBackgroundColor;
+            position: absolute;
+            bottom: calc($footerHeight + $footerBorderWidth);
+            display: none;
+            right: $footerItemsLefrRightMargin;
+
+
+            .settings-text {
+                color: $showSettingsFontColor;
+
+                &:hover {
+                    color: $showSettingsHoverFontColor;
+                    cursor: pointer;
+                }
+            }
+        }
+
+
+
     }
 
-    .show-button {
-        &__display {}
-
-        &__position {}
-
-        &__view {}
-    }
 }
