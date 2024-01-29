@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { PersonalDataService } from './personal-data.service';
 
 @Component({
   selector: 'app-footer',
@@ -7,38 +6,46 @@ import { PersonalDataService } from './personal-data.service';
   styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent implements OnInit {
-  rotationAngle: number = 45;
-  mbValue: string = 'auto';
-  isClicked: boolean = false;
-  enablePersonalData: boolean = false;
-  resetDataStatus: boolean = true;
-
-  constructor(private personalDataService: PersonalDataService) { }
 
   ngOnInit(): void {
-  }
+    const footerButton = document.querySelector('.show-button')
+    const buttonArrow = footerButton.querySelector('.footerArrow')
+    const frame = document.querySelector('.show-block')
 
-  toggleFrame() {
-    this.isClicked = !this.isClicked;
-    if (this.isClicked) {
-      this.rotationAngle = 225;
-      this.mbValue = '3px';
-    } else {
-      this.rotationAngle = 45;
-      this.mbValue = 'auto';
+    let changeButton = () => {
+      if (buttonArrow.getAttribute('data-button') === "frame-closed") {
+        frame.removeAttribute("style")
+        buttonArrow.classList.add('fa-chevron-down')
+        buttonArrow.classList.remove('fa-chevron-up')
+        buttonArrow.setAttribute('data-button', 'frame-opened')
+        setTimeout(() => {
+          frame.setAttribute("style", "display: block; animation-name: none;")
+          footerButton.classList.remove('showIt')
+          footerButton.classList.add('hideIt')
+        }, 301);
+
+      } else if (buttonArrow.getAttribute('data-button') === "frame-opened") {
+        frame.removeAttribute("style")
+        buttonArrow.classList.add('fa-chevron-up')
+        buttonArrow.classList.remove('fa-chevron-down')
+        buttonArrow.setAttribute('data-button', 'frame-closed')
+        frame.setAttribute("style", "animation-name: hideIt;")
+        footerButton.classList.remove('hideIt')
+        footerButton.classList.add('showIt')
+        setTimeout(() => {
+          frame.setAttribute("style", "display: none;")
+        }, 301);
+
+      }
     }
+
+    footerButton.addEventListener("click", changeButton)
   }
 
-  showUserData() {
-    this.enablePersonalData = true;
-    this.personalDataService.setDataStatus(this.enablePersonalData);
-    this.toggleFrame();
-  }
-
-  resetSettings() {
-    this.enablePersonalData = false;
-    this.personalDataService.setDataStatus(this.enablePersonalData);
-    this.personalDataService.setResetStatus(this.resetDataStatus);
-    this.toggleFrame();
-  }
 }
+
+
+
+
+
+

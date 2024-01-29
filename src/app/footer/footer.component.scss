@@ -1,9 +1,7 @@
 @import "../app.component.scss";
 
-$footerHeight: 20vw;
 $footerBackgroundColor: #15161a;
 $footerBorderColor: #0a0b0d;
-$footerBorderWidth: 3px;
 $footerItemsLefrRightMargin: 3vw;
 $cssAwesomeDimention: 15vw;
 $cssAwesomeBorderWidth: 2px;
@@ -101,10 +99,19 @@ $buttonHoverFontColor: #fff;
         &__view {}
 
         .line {
-            width: 2em;
-            height: 1px;
-            margin: auto 5px;
-            background-color: $nabthatColor;
+
+            &__display {
+                width: 2em;
+                height: 1px;
+            }
+
+            &__position {
+                margin: auto 5px;
+            }
+
+            &__view {
+                background-color: $nabthatColor;
+            }
         }
 
         h2 {
@@ -116,33 +123,38 @@ $buttonHoverFontColor: #fff;
 
     .show-settings {
 
-        margin-right: $footerItemsLefrRightMargin;
+
 
         &__display {}
 
-        &__position {}
+        &__position {
+            margin-right: $footerItemsLefrRightMargin;
+        }
 
         &__view {}
 
-
-
         .show-button {
-            width: $buttonWidth;
-            height: $buttonHeight;
-            text-transform: uppercase;
-            border: 1px solid $buttonBorderColor;
-            border-radius: 3px;
-            background-color: $buttonBackgroundColor;
-            color: $buttonFontColor;
-            font-weight: 900;
-            padding: 4vw 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
 
-            .fa-chevron-down {
-                display: none;
+            &__display {
+                width: $buttonWidth;
+                height: $buttonHeight;
+                display: flex;
+            }
+
+            &__position {
+                position: relative;
+                justify-content: center;
+                align-items: center;
+                padding: 4vw 0;
+            }
+
+            &__view {
+                text-transform: uppercase;
+                border: 1px solid $buttonBorderColor;
+                border-radius: 3px;
+                background-color: $buttonBackgroundColor;
+                color: $buttonFontColor;
+                font-weight: 900;
             }
 
             &:hover {
@@ -151,9 +163,13 @@ $buttonHoverFontColor: #fff;
                 cursor: pointer;
             }
 
+
+        }
+
+        .showIt {
             &:focus~.show-block {
                 animation-name: showIt;
-                animation-duration: 1s;
+                animation-duration: 0.3s;
                 animation-fill-mode: forwards;
                 animation-iteration-count: 1;
                 display: block;
@@ -183,21 +199,63 @@ $buttonHoverFontColor: #fff;
                     bottom: calc($footerHeight + $footerBorderWidth);
                 }
             }
+        }
 
+        .hideIt {
+            &:focus~.show-block {
+                animation-name: hideIt;
+                animation-duration: 0.3s;
+                animation-fill-mode: forwards;
+                animation-iteration-count: 1;
+                display: none;
+                z-index: -2;
+            }
+
+            &:focus {
+
+
+                &::after {
+                    content: "";
+                    width: $buttonWidth;
+                    height: calc($footerHeight + $footerBorderWidth);
+                    border-top: $footerBorderWidth solid $footerBorderColor;
+                    background-color: $footerBackgroundColor;
+                    position: absolute;
+                    z-index: -1;
+                }
+            }
+
+            @keyframes hideIt {
+                from {
+                    bottom: calc($footerHeight + $footerBorderWidth);
+                }
+
+                to {
+                    bottom: 0;
+                }
+            }
         }
 
         .show-block {
-            width: $buttonWidth;
-            background-color: $showSettingsBackgroundColor;
-            color: $showSettingsFontColor;
-            list-style-image: url('https://fontawesome.com/icons/chevron-right?f=classic&s=solid');
-            text-transform: uppercase;
-            box-shadow: 0px 0px 13px 7px $footerBackgroundColor;
-            position: absolute;
-            bottom: calc($footerHeight + $footerBorderWidth);
-            display: none;
-            right: $footerItemsLefrRightMargin;
 
+            &__display {
+                display: none;
+                width: $buttonWidth;
+            }
+
+            &__position {
+                position: absolute;
+                right: $footerItemsLefrRightMargin;
+                bottom: calc($footerHeight + $footerBorderWidth);
+            }
+
+            &__view {
+                background-color: $showSettingsBackgroundColor;
+                color: $showSettingsFontColor;
+                list-style-image: url('https://fontawesome.com/icons/chevron-right?f=classic&s=solid');
+                text-transform: uppercase;
+                box-shadow: 0px 0px 13px 7px $footerBackgroundColor;
+            }
 
             .settings-text {
                 color: $showSettingsFontColor;

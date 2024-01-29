@@ -92,53 +92,58 @@ a {
       -ms-flex-direction: row;
           flex-direction: row;
 }
-.footer .nabthat .line {
+.footer .nabthat .line__display {
   width: 2em;
   height: 1px;
+}
+.footer .nabthat .line__position {
   margin: auto 5px;
+}
+.footer .nabthat .line__view {
   background-color: #2c2d32;
 }
 .footer .nabthat h2 {
   color: #2c2d32;
   font-weight: normal;
 }
-.footer .show-settings {
+.footer .show-settings__position {
   margin-right: 3vw;
 }
-.footer .show-settings .show-button {
+.footer .show-settings .show-button__display {
   width: 45vw;
   height: 3vw;
-  text-transform: uppercase;
-  border: 1px solid #2c2d32;
-  border-radius: 3px;
-  background-color: #15161a;
-  color: #a3a9b5;
-  font-weight: 900;
-  padding: 4vw 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+.footer .show-settings .show-button__position {
+  position: relative;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: relative;
+  padding: 4vw 0;
 }
-.footer .show-settings .show-button .fa-chevron-down {
-  display: none;
+.footer .show-settings .show-button__view {
+  text-transform: uppercase;
+  border: 1px solid #2c2d32;
+  border-radius: 3px;
+  background-color: #15161a;
+  color: #a3a9b5;
+  font-weight: 900;
 }
 .footer .show-settings .show-button:hover {
   border-color: #fff;
   color: #fff;
   cursor: pointer;
 }
-.footer .show-settings .show-button:focus ~ .show-block {
+.footer .show-settings .showIt:focus ~ .show-block {
   -webkit-animation-name: showIt;
           animation-name: showIt;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
+  -webkit-animation-duration: 0.3s;
+          animation-duration: 0.3s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
   -webkit-animation-iteration-count: 1;
@@ -146,7 +151,7 @@ a {
   display: block;
   z-index: -2;
 }
-.footer .show-settings .show-button:focus::after {
+.footer .show-settings .showIt:focus::after {
   content: "";
   width: 45vw;
   height: calc(20vw + 3px);
@@ -171,18 +176,59 @@ a {
     bottom: calc(20vw + 3px);
   }
 }
-.footer .show-settings .show-block {
+.footer .show-settings .hideIt:focus ~ .show-block {
+  -webkit-animation-name: hideIt;
+          animation-name: hideIt;
+  -webkit-animation-duration: 0.3s;
+          animation-duration: 0.3s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  display: none;
+  z-index: -2;
+}
+.footer .show-settings .hideIt:focus::after {
+  content: "";
   width: 45vw;
+  height: calc(20vw + 3px);
+  border-top: 3px solid #0a0b0d;
+  background-color: #15161a;
+  position: absolute;
+  z-index: -1;
+}
+@-webkit-keyframes hideIt {
+  from {
+    bottom: calc(20vw + 3px);
+  }
+  to {
+    bottom: 0;
+  }
+}
+@keyframes hideIt {
+  from {
+    bottom: calc(20vw + 3px);
+  }
+  to {
+    bottom: 0;
+  }
+}
+.footer .show-settings .show-block__display {
+  display: none;
+  width: 45vw;
+}
+.footer .show-settings .show-block__position {
+  position: absolute;
+  right: 3vw;
+  bottom: calc(20vw + 3px);
+}
+.footer .show-settings .show-block__view {
   background-color: #fff;
   color: #141517;
   list-style-image: url("https://fontawesome.com/icons/chevron-right?f=classic&s=solid");
   text-transform: uppercase;
   -webkit-box-shadow: 0px 0px 13px 7px #15161a;
           box-shadow: 0px 0px 13px 7px #15161a;
-  position: absolute;
-  bottom: calc(20vw + 3px);
-  display: none;
-  right: 3vw;
 }
 .footer .show-settings .show-block .settings-text {
   color: #141517;

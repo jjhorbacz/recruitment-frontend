@@ -10,20 +10,20 @@
         <h2>
             nabthat
         </h2>
-        <div class="line"></div>
+        <div class="line line__display line__position line__view"></div>
     </div>
-    <div class="show-settings">
+    <div class="show-settings show-settings__position">
 
-        <button type="button" class="show-button">
-            pokaż&nbsp;<i class="fa-sharp fa-solid fa-chevron-up"></i><i class="fa-sharp fa-solid fa-chevron-down"></i>
+        <button type="button" class="show-button show-button__display show-button__position show-button__view showIt">
+            pokaż&nbsp;<i class="fa-sharp fa-solid fa-chevron-up footerArrow" data-button="frame-closed"></i>
         </button>
-        <div class="show-block">
+        <div class="show-block show-block__display show-block__position show-block__view">
             <ul class="fa-ul">
-                <li><a (click)="resetSettings()" class="settings-text">
+                <li><a class="settings-text">
                         <span class="fa-li"><i
                                 class="fa-sharp fa-solid fa-chevron-right"></i></span>zresetuj&nbsp;ustawienia
                     </a></li>
-                <li><a (click)="showUserData()" class="settings-text">
+                <li><a class="settings-text">
                         <span class="fa-li"><i
                                 class="fa-sharp fa-solid fa-chevron-right"></i></span>pokaż&nbsp;dane&nbsp;osobowe
                     </a></li>
