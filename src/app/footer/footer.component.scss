@@ -300,7 +300,7 @@ app-footer {
 
 }
 
-@media (min-width: 768px) and (max-width: 991px) {
+@media screen and (min-width: 768px) and (max-width: 991px) {
     $headerHeight: 18vw;
     $footerHeight: 18vw;
     $cssAwesomeDimention: 12vw;
@@ -319,9 +319,7 @@ app-footer {
             z-index: 2;
         }
 
-        &__position {
-            position: relative;
-        }
+        &__position {}
 
         &__view {
             background-color: $footerBackgroundColor;
@@ -565,7 +563,7 @@ app-footer {
     }
 }
 
-@media (min-width: 992px) and (max-width: 1199px) {
+@media screen and (min-width: 992px) and (max-width: 1199px) {
     $headerHeight: 16vw;
     $footerHeight: 15vw;
     $cssAwesomeDimention: 10vw;
@@ -583,9 +581,7 @@ app-footer {
             z-index: 2;
         }
 
-        &__position {
-            position: relative;
-        }
+        &__position {}
 
         &__view {
             background-color: $footerBackgroundColor;
@@ -829,7 +825,7 @@ app-footer {
     }
 }
 
-@media (min-width: 1200px) {
+@media screen and (min-width: 1200px) {
     $headerHeight: 10em;
     $footerHeight: 10em;
     $cssAwesomeDimention: 6em;

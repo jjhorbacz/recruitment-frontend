@@ -249,7 +249,7 @@ $addTextsColor: #a3a9b5;
 
 }
 
-@media (min-width: 768px) and (max-width: 991px) {
+@media screen and (min-width: 768px) and (max-width: 991px) {
     $headerHeight: 18vw;
     $footerHeight: 18vw;
     $footerBorderWidth: 3px;
@@ -446,7 +446,7 @@ $addTextsColor: #a3a9b5;
     }
 }
 
-@media (min-width: 992px) and (max-width: 1199px) {
+@media screen and (min-width: 992px) and (max-width: 1199px) {
     $headerHeight: 16vw;
     $footerHeight: 15vw;
     $footerBorderWidth: 3px;
@@ -643,7 +643,7 @@ $addTextsColor: #a3a9b5;
     }
 }
 
-@media (min-width: 1200px) {
+@media screen and (min-width: 1200px) {
     $headerHeight: 10em;
     $footerHeight: 10em;
     $footerBorderWidth: 3px;
@@ -786,8 +786,12 @@ $addTextsColor: #a3a9b5;
                 .buttonsWrapper {
                     display: flex;
                     flex-wrap: nowrap;
-                    justify-content: space-around;
                     width: 100%;
+                    justify-content: center;
+
+                    .change-button {
+                        margin-right: 3rem;
+                    }
 
                     .change-button,
                     .add-button {

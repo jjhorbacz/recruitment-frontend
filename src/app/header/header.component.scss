@@ -84,7 +84,7 @@ $headerHeadlingSize: 3vw;
     }
 }
 
-@media (min-width: 768px) and (max-width: 991px) {
+@media screen and (min-width: 768px) and (max-width: 991px) {
     $headerHeight: 18vw;
     $headerIconSize: 8vw;
     $headerIconWidth: 11vw;
@@ -147,7 +147,7 @@ $headerHeadlingSize: 3vw;
     }
 }
 
-@media (min-width: 992px) and (max-width: 1199px) {
+@media screen and (min-width: 992px) and (max-width: 1199px) {
     $headerHeight: 16vw;
     $headerIconSize: 7vw;
     $headerIconWidth: 10vw;
@@ -211,7 +211,7 @@ $headerHeadlingSize: 3vw;
 
 }
 
-@media (min-width: 1200px) {
+@media screen and (min-width: 1200px) {
     $headerHeight: 10em;
     $headerIconSize: 5em;
     $headerIconWidth: 1.5em;

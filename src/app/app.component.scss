@@ -1,21 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans');
 
-$mainFont: 'Open Sans', sans-serif;
-$mainFontColor: #fff;
-
 app-root {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 100vh;
-}
-
-body {
-    margin: 0;
-    font-family: $mainFont;
-}
-
-a {
-    text-decoration: none;
-    color: $mainFontColor;
 }

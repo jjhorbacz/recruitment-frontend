@@ -17,6 +17,11 @@ export class FooterComponent implements OnInit {
 
     const resetSettings = document.querySelector('.resetSettings')
 
+    const placeForLines = document.querySelector('.block-three-texts');
+
+    const optionOne = document.getElementById('option-one') as HTMLInputElement;
+    const optionTwo = document.getElementById('option-two') as HTMLInputElement;
+    const optionThree = document.getElementById('option-three') as HTMLInputElement;
 
     let changeButton = () => {
       if (buttonArrow.getAttribute('data-button') === "frame-closed") {
@@ -93,12 +98,19 @@ export class FooterComponent implements OnInit {
 
     let resetAllSettings = () => {
       if (document.querySelector('.user') === null) {
-
       } else {
         const userName = document.getElementById('userName')
         document.querySelector('.header-title').removeChild(userName);
         addUserData.querySelector('a').innerHTML = '<span class="fa-li"><i class="fa-sharp fa-solid fa-chevron-right"></i></span>pokaż&nbsp;dane&nbsp;osobowe'
       }
+      placeForLines.classList.remove('firstLine');
+      placeForLines.classList.remove('secondLine');
+      placeForLines.classList.remove('thirdLine');
+      placeForLines.classList.remove('fourthLine');
+      placeForLines.classList.remove('fifthLine');
+      placeForLines.classList.remove('sixthLine');
+      placeForLines.innerHTML = ''
+      optionOne.checked = true;
     }
 
     footerButton.addEventListener("click", changeButton)

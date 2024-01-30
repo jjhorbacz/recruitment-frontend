@@ -236,7 +236,7 @@ app-footer {
   cursor: pointer;
 }
 
-@media (min-width: 768px) and (max-width: 991px) {
+@media screen and (min-width: 768px) and (max-width: 991px) {
   .footer__display {
     height: 18vw;
     width: 100%;
@@ -247,9 +247,6 @@ app-footer {
         -ms-flex-align: center;
             align-items: center;
     z-index: 2;
-  }
-  .footer__position {
-    position: relative;
   }
   .footer__view {
     background-color: #15161a;
@@ -451,7 +448,7 @@ app-footer {
     cursor: pointer;
   }
 }
-@media (min-width: 992px) and (max-width: 1199px) {
+@media screen and (min-width: 992px) and (max-width: 1199px) {
   .footer__display {
     height: 15vw;
     width: 100%;
@@ -462,9 +459,6 @@ app-footer {
         -ms-flex-align: center;
             align-items: center;
     z-index: 2;
-  }
-  .footer__position {
-    position: relative;
   }
   .footer__view {
     background-color: #15161a;
@@ -666,7 +660,7 @@ app-footer {
     cursor: pointer;
   }
 }
-@media (min-width: 1200px) {
+@media screen and (min-width: 1200px) {
   .footer__display {
     height: 10em;
     width: 100%;
