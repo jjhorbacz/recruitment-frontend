@@ -12,6 +12,12 @@ export class FooterComponent implements OnInit {
     const buttonArrow = footerButton.querySelector('.footerArrow')
     const frame = document.querySelector('.show-block')
 
+    const addUserData = document.querySelector('.addUserData')
+    const headerTitle = document.querySelector('.header-title')
+
+    const resetSettings = document.querySelector('.resetSettings')
+
+
     let changeButton = () => {
       if (buttonArrow.getAttribute('data-button') === "frame-closed") {
         frame.removeAttribute("style")
@@ -39,7 +45,36 @@ export class FooterComponent implements OnInit {
       }
     }
 
+    let displayUserData = () => {
+      if (document.querySelector('.user') === null) {
+        const user = document.createElement("p")
+        user.classList.add('header-title-text', 'header-title-text__position', 'header-title-text__view', 'user')
+        user.textContent = 'Jakub Horbacz'
+        headerTitle.appendChild(user)
+        user.setAttribute('id', "userName")
+        addUserData.querySelector('a').innerHTML = '<span class="fa-li"><i class="fa-sharp fa-solid fa-chevron-right"></i></span>schowaj&nbsp;dane&nbsp;osobowe'
+      } else {
+        const userName = document.getElementById('userName')
+        document.querySelector('.header-title').removeChild(userName);
+        addUserData.querySelector('a').innerHTML = '<span class="fa-li"><i class="fa-sharp fa-solid fa-chevron-right"></i></span>pokaż&nbsp;dane&nbsp;osobowe'
+      }
+    }
+
+    let resetAllSettings = () => {
+      if (document.querySelector('.user') === null) {
+
+      } else {
+        const userName = document.getElementById('userName')
+        document.querySelector('.header-title').removeChild(userName);
+        addUserData.querySelector('a').innerHTML = '<span class="fa-li"><i class="fa-sharp fa-solid fa-chevron-right"></i></span>pokaż&nbsp;dane&nbsp;osobowe'
+      }
+    }
+
     footerButton.addEventListener("click", changeButton)
+
+    addUserData.addEventListener("click", displayUserData)
+
+    resetSettings.addEventListener('click', resetAllSettings)
   }
 
 }
