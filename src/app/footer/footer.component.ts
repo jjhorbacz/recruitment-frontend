@@ -26,8 +26,22 @@ export class FooterComponent implements OnInit {
         buttonArrow.setAttribute('data-button', 'frame-opened')
         setTimeout(() => {
           frame.setAttribute("style", "display: block; animation-name: none;")
-          footerButton.classList.remove('showIt')
-          footerButton.classList.add('hideIt')
+          if (window.screen.width < 768) {
+            footerButton.classList.remove('showIt')
+            footerButton.classList.add('hideIt')
+          }
+          if (window.screen.width > 768 && window.screen.width < 991) {
+            footerButton.classList.remove('showItt')
+            footerButton.classList.add('hideItt')
+          }
+          if (window.screen.width > 991 && window.screen.width < 1199) {
+            footerButton.classList.remove('showIttt')
+            footerButton.classList.add('hideIttt')
+          }
+          if (window.screen.width > 1199) {
+            footerButton.classList.remove('showItttt')
+            footerButton.classList.add('hideItttt')
+          }
         }, 301);
 
       } else if (buttonArrow.getAttribute('data-button') === "frame-opened") {
@@ -35,9 +49,26 @@ export class FooterComponent implements OnInit {
         buttonArrow.classList.add('fa-chevron-up')
         buttonArrow.classList.remove('fa-chevron-down')
         buttonArrow.setAttribute('data-button', 'frame-closed')
-        frame.setAttribute("style", "animation-name: hideIt;")
-        footerButton.classList.remove('hideIt')
-        footerButton.classList.add('showIt')
+        if (window.screen.width < 768) {
+          frame.setAttribute("style", "animation-name: hideIt;")
+          footerButton.classList.remove('hideIt')
+          footerButton.classList.add('showIt')
+        }
+        if (window.screen.width > 768 && window.screen.width < 991) {
+          frame.setAttribute("style", "animation-name: hideItt;")
+          footerButton.classList.remove('hideItt')
+          footerButton.classList.add('showItt')
+        }
+        if (window.screen.width > 991 && window.screen.width < 1199) {
+          frame.setAttribute("style", "animation-name: hideIttt;")
+          footerButton.classList.remove('hideIttt')
+          footerButton.classList.add('showIttt')
+        }
+        if (window.screen.width > 1199) {
+          frame.setAttribute("style", "animation-name: hideItttt;")
+          footerButton.classList.remove('hideItttt')
+          footerButton.classList.add('showIt')
+        }
         setTimeout(() => {
           frame.setAttribute("style", "display: none;")
         }, 301);

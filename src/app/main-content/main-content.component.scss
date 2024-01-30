@@ -1,5 +1,9 @@
-@import "../app.component.scss";
-
+$mainFont: 'Open Sans', sans-serif;
+$mainFontColor: #fff;
+$secondFontColor: #a3a8b5;
+$headerHeight: 22vw;
+$footerHeight: 20vw;
+$footerBorderWidth: 3px;
 $contentBackgroundColor: #2a2d36;
 $contentMarginBottom: $footerHeight;
 $contentPadding: 4vw;
@@ -243,4 +247,606 @@ $addTextsColor: #a3a9b5;
         }
     }
 
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    $headerHeight: 18vw;
+    $footerHeight: 18vw;
+    $footerBorderWidth: 3px;
+    $contentMarginBottom: $footerHeight;
+    $contentPadding: 4vw;
+    $headingSize: 4vw;
+    $lineWidth: 22vw;
+    $headingTwoSize: 3vw;
+    $buttonWidth: 25vw;
+
+    .main-content {
+        background-color: $contentBackgroundColor;
+        min-height: calc(100vh - $headerHeight - $footerHeight - $footerBorderWidth);
+        padding: 0 $contentPadding;
+
+        .main-header {
+            h1 {
+
+                &.__display {}
+
+                &.__position {
+                    margin: 0;
+                    padding-top: 3vw;
+                    padding-bottom: 1vw;
+                }
+
+                &.__view {
+                    font-size: $headingSize;
+                }
+            }
+
+            hr {
+                width: $lineWidth;
+            }
+
+        }
+
+        .main-blocks {
+
+            &__display {
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            &__position {}
+
+            &__view {}
+
+            .block-one {
+
+                &__display {
+                    width: 50%;
+                }
+
+                &__position {
+                    justify-content: start;
+                    padding-top: $contentPadding;
+                    flex-direction: column;
+                }
+
+                &__view {}
+
+                h2 {
+                    font-size: $headingTwoSize;
+                }
+
+                .r-buttons {
+                    &__display {
+                        display: flex;
+                    }
+
+                    &__position {
+                        justify-content: space-between;
+                        flex-direction: column;
+                        margin-top: $headingTwoSize;
+                        margin-bottom: $headingTwoSize;
+                    }
+
+                    &__view {
+                        text-transform: none;
+                    }
+
+                    .hide {
+                        display: none;
+                    }
+
+                    label {
+                        display: flex;
+                        justify-content: start;
+                        align-items: center;
+
+                        input {}
+
+                        i {
+                            font-size: calc($headingTwoSize*1.2);
+                        }
+
+                        .radio-text {
+                            &__display {}
+
+                            &__position {}
+
+                            &__view {
+                                font-size: calc($headingTwoSize*0.8);
+                            }
+                        }
+                    }
+
+
+
+
+
+                }
+            }
+
+            .block-two {
+
+                &__display {
+                    display: flex;
+                    width: 50%;
+
+                }
+
+                &__position {
+                    flex-direction: column;
+                    align-items: end;
+                    padding-top: $contentPadding;
+                }
+
+                &__view {
+                    font-size: $headingTwoSize;
+                }
+
+                h2 {
+                    font-size: $headingTwoSize;
+                }
+
+                .change-button,
+                .add-button {
+
+                    &__display {
+                        width: $buttonWidth;
+                        display: flex;
+                    }
+
+                    &__position {
+                        justify-content: center;
+                        align-items: center;
+                        padding: 2vw 0;
+                        margin-top: $contentPadding;
+                    }
+
+                    &__view {
+                        font-size: calc($headingTwoSize*0.7);
+                    }
+                }
+            }
+
+            .block-three {
+
+                &__display {
+                    display: flex;
+                    width: 100%;
+
+                }
+
+                &__position {
+                    justify-content: center;
+                    flex-direction: column;
+                    padding-top: $contentPadding;
+                }
+
+                &__view {
+                    text-align: center;
+                }
+
+                h2 {
+                    font-size: $headingTwoSize;
+                    width: 100%;
+                    white-space: nowrap;
+                }
+
+                .block-three-texts {
+                    &__display {}
+
+                    &__position {}
+
+                    &__view {
+                        font-size: calc($headingTwoSize * 0.7);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    $headerHeight: 16vw;
+    $footerHeight: 15vw;
+    $footerBorderWidth: 3px;
+    $contentMarginBottom: $footerHeight;
+    $contentPadding: 4vw;
+    $headingSize: 2vw;
+    $lineWidth: 12vw;
+    $headingTwoSize: 1.5vw;
+    $buttonWidth: 15vw;
+
+    .main-content {
+        background-color: $contentBackgroundColor;
+        min-height: calc(100vh - $headerHeight - $footerHeight - $footerBorderWidth);
+        padding: 0 $contentPadding;
+
+        .main-header {
+            h1 {
+
+                &.__display {}
+
+                &.__position {
+                    margin: 0;
+                    padding-top: 3vw;
+                    padding-bottom: 1vw;
+                }
+
+                &.__view {
+                    font-size: $headingSize;
+                }
+            }
+
+            hr {
+                width: $lineWidth;
+            }
+
+        }
+
+        .main-blocks {
+
+            &__display {
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            &__position {}
+
+            &__view {}
+
+            .block-one {
+
+                &__display {
+                    width: 50%;
+                }
+
+                &__position {
+                    justify-content: start;
+                    padding-top: $contentPadding;
+                    flex-direction: column;
+                }
+
+                &__view {}
+
+                h2 {
+                    font-size: $headingTwoSize;
+                }
+
+                .r-buttons {
+                    &__display {
+                        display: flex;
+                    }
+
+                    &__position {
+                        justify-content: space-between;
+                        flex-direction: column;
+                        margin-top: $headingTwoSize;
+                        margin-bottom: $headingTwoSize;
+                    }
+
+                    &__view {
+                        text-transform: none;
+                    }
+
+                    .hide {
+                        display: none;
+                    }
+
+                    label {
+                        display: flex;
+                        justify-content: start;
+                        align-items: center;
+
+                        input {}
+
+                        i {
+                            font-size: calc($headingTwoSize*1.2);
+                        }
+
+                        .radio-text {
+                            &__display {}
+
+                            &__position {}
+
+                            &__view {
+                                font-size: calc($headingTwoSize*0.8);
+                            }
+                        }
+                    }
+
+
+
+
+
+                }
+            }
+
+            .block-two {
+
+                &__display {
+                    display: flex;
+                    width: 50%;
+
+                }
+
+                &__position {
+                    flex-direction: column;
+                    align-items: end;
+                    padding-top: $contentPadding;
+                }
+
+                &__view {
+                    font-size: $headingTwoSize;
+                }
+
+                h2 {
+                    font-size: $headingTwoSize;
+                }
+
+                .change-button,
+                .add-button {
+
+                    &__display {
+                        width: $buttonWidth;
+                        display: flex;
+                    }
+
+                    &__position {
+                        justify-content: center;
+                        align-items: center;
+                        padding: 2vw 0;
+                        margin-top: $contentPadding;
+                    }
+
+                    &__view {
+                        font-size: calc($headingTwoSize*0.7);
+                    }
+                }
+            }
+
+            .block-three {
+
+                &__display {
+                    display: flex;
+                    width: 100%;
+
+                }
+
+                &__position {
+                    justify-content: center;
+                    flex-direction: column;
+                    padding-top: $contentPadding;
+                }
+
+                &__view {
+                    text-align: center;
+                }
+
+                h2 {
+                    font-size: $headingTwoSize;
+                    width: 100%;
+                    white-space: nowrap;
+                }
+
+                .block-three-texts {
+                    &__display {}
+
+                    &__position {}
+
+                    &__view {
+                        font-size: calc($headingTwoSize * 0.7);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    $headerHeight: 10em;
+    $footerHeight: 10em;
+    $footerBorderWidth: 3px;
+    $contentMarginBottom: $footerHeight;
+    $contentPadding: 2rem;
+    $headingSize: 2rem;
+    $lineWidth: 10rem;
+    $headingTwoSize: 1.5rem;
+    $buttonWidth: 10rem;
+
+    .main-content {
+        background-color: $contentBackgroundColor;
+        min-height: calc(100vh - $headerHeight - $footerHeight - $footerBorderWidth);
+        padding: 0 $contentPadding;
+
+        .main-header {
+            h1 {
+
+                &.__display {}
+
+                &.__position {
+                    margin: 0;
+                    padding-top: 2rem;
+                    padding-bottom: 0.2rem;
+                }
+
+                &.__view {
+                    font-size: $headingSize;
+                }
+            }
+
+            hr {
+                width: $lineWidth;
+            }
+
+        }
+
+        .main-blocks {
+
+            &__display {
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            &__position {}
+
+            &__view {}
+
+            .block-one {
+
+                &__display {
+                    width: 33.3%;
+                }
+
+                &__position {
+                    justify-content: start;
+                    padding-top: $contentPadding;
+                    flex-direction: column;
+                }
+
+                &__view {}
+
+                h2 {
+                    font-size: $headingTwoSize;
+                    text-align: center;
+                }
+
+                .r-buttons {
+                    &__display {
+                        display: flex;
+                    }
+
+                    &__position {
+                        justify-content: space-between;
+                        flex-direction: column;
+                        margin-top: $headingTwoSize;
+                        margin-bottom: $headingTwoSize;
+                    }
+
+                    &__view {
+                        text-transform: none;
+                    }
+
+                    .hide {
+                        display: none;
+                    }
+
+                    label {
+                        display: flex;
+                        justify-content: start;
+                        align-items: center;
+
+                        input {}
+
+                        i {
+                            font-size: calc($headingTwoSize*1.2);
+                        }
+
+                        .radio-text {
+                            &__display {}
+
+                            &__position {}
+
+                            &__view {
+                                font-size: calc($headingTwoSize*0.8);
+                            }
+                        }
+                    }
+
+
+
+
+
+                }
+            }
+
+            .block-two {
+
+                &__display {
+                    display: flex;
+                    width: 33.3%;
+
+                }
+
+                &__position {
+                    flex-direction: column;
+                    align-items: center;
+                    padding-top: $contentPadding;
+                    justify-content: start;
+                }
+
+                &__view {
+                    font-size: $headingTwoSize;
+                }
+
+                h2 {
+                    font-size: $headingTwoSize;
+                }
+
+                .buttonsWrapper {
+                    display: flex;
+                    flex-wrap: nowrap;
+                    justify-content: space-around;
+                    width: 100%;
+
+                    .change-button,
+                    .add-button {
+
+                        &__display {
+                            width: $buttonWidth;
+                            display: flex;
+                        }
+
+                        &__position {
+                            justify-content: center;
+                            align-items: center;
+                            padding: 1em 0;
+                            margin-top: $contentPadding;
+                        }
+
+                        &__view {
+                            font-size: calc($headingTwoSize*0.7);
+                        }
+                    }
+                }
+
+
+            }
+
+            .block-three {
+
+                &__display {
+                    display: flex;
+                    width: 33.3%;
+
+                }
+
+                &__position {
+                    justify-content: start;
+                    flex-direction: column;
+                    padding-top: $contentPadding;
+                }
+
+                &__view {
+                    text-align: center;
+                }
+
+                h2 {
+                    font-size: $headingTwoSize;
+                    width: 100%;
+                    white-space: nowrap;
+                }
+
+                .block-three-texts {
+                    &__display {}
+
+                    &__position {}
+
+                    &__view {
+                        font-size: calc($headingTwoSize * 0.7);
+                    }
+                }
+            }
+        }
+    }
 }

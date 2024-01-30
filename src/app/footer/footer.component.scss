@@ -1,5 +1,9 @@
-@import "../app.component.scss";
-
+$mainFont: 'Open Sans', sans-serif;
+$mainFontColor: #fff;
+$secondFontColor: #a3a8b5;
+$headerHeight: 22vw;
+$footerHeight: 20vw;
+$footerBorderWidth: 3px;
 $footerBackgroundColor: #15161a;
 $footerBorderColor: #0a0b0d;
 $footerItemsLefrRightMargin: 3vw;
@@ -14,24 +18,41 @@ $showSettingsHoverFontColor: #e88301;
 $showSettingsBackgroundColor: #fff;
 $buttonWidth: 45vw;
 $buttonHeight: 3vw;
+$buttonFontSize: 2.5vw;
 $buttonBorderColor: #2c2d32;
 $buttonBackgroundColor: #15161a;
 $buttonFontColor: #a3a9b5;
 $buttonHoverBorderColor: #fff;
 $buttonHoverFontColor: #fff;
 
+body {
+    margin: 0;
+    font-family: $mainFont;
+}
+
+a {
+    text-decoration: none;
+    color: $mainFontColor;
+}
+
+app-footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
 .footer {
     &__display {
         height: $footerHeight;
         width: 100%;
         display: flex;
-        justify-content: space-between;
         align-items: center;
         z-index: 2;
     }
 
     &__position {
         position: relative;
+        justify-content: space-between;
     }
 
     &__view {
@@ -92,9 +113,13 @@ $buttonHoverFontColor: #fff;
         &__display {
             display: none;
             flex-direction: row;
+            width: 200px;
         }
 
-        &__position {}
+        &__position {
+            position: absolute;
+            left: calc(50vw - 100px)
+        }
 
         &__view {}
 
@@ -155,6 +180,7 @@ $buttonHoverFontColor: #fff;
                 background-color: $buttonBackgroundColor;
                 color: $buttonFontColor;
                 font-weight: 900;
+                font-size: $buttonFontSize;
             }
 
             &:hover {
@@ -255,6 +281,7 @@ $buttonHoverFontColor: #fff;
                 list-style-image: url('https://fontawesome.com/icons/chevron-right?f=classic&s=solid');
                 text-transform: uppercase;
                 box-shadow: 0px 0px 13px 7px $footerBackgroundColor;
+                font-size: $buttonFontSize;
             }
 
             .settings-text {
@@ -271,4 +298,797 @@ $buttonHoverFontColor: #fff;
 
     }
 
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    $headerHeight: 18vw;
+    $footerHeight: 18vw;
+    $cssAwesomeDimention: 12vw;
+    $cssAwesomeBorderWidth: 2px;
+    $buttonWidth: 35vw;
+    $buttonHeight: 3vw;
+    $buttonFontSize: 2vw;
+    $footerBorderWidth: 3px;
+
+    .footer {
+        &__display {
+            height: $footerHeight;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            z-index: 2;
+        }
+
+        &__position {
+            position: relative;
+        }
+
+        &__view {
+            background-color: $footerBackgroundColor;
+            border-top: $footerBorderWidth solid $footerBorderColor;
+        }
+
+        .css-is-awesome {
+            &__display {
+                left: $footerItemsLefrRightMargin;
+                display: flex;
+                align-items: center;
+            }
+
+            &__position {
+                position: relative;
+                z-index: 1;
+            }
+
+            &__view {
+                width: $cssAwesomeDimention;
+                height: $cssAwesomeDimention;
+                border: $cssAwesomeBorderWidth solid $cssAwesomeColor;
+            }
+
+            &:hover {
+                border-color: $hoverBorderColor;
+                rotate: 360deg;
+                transition: rotate 1s;
+                cursor: pointer;
+            }
+
+            &:hover~.css-is-awesome-text {
+                color: $hoverFontColor;
+            }
+
+        }
+
+        .css-is-awesome-text {
+            &__display {
+                left: 0;
+            }
+
+            &__position {
+                position: absolute;
+            }
+
+            &__view {
+                text-transform: uppercase;
+                padding-left: calc(calc($cssAwesomeDimention / 10) + $footerItemsLefrRightMargin);
+                font-size: calc($cssAwesomeDimention / 4.5);
+                color: $cssAwesomeColor;
+                letter-spacing: calc($cssAwesomeDimention / 80);
+            }
+        }
+
+        .nabthat {
+            &__display {
+                display: none;
+                flex-direction: row;
+            }
+
+            &__position {}
+
+            &__view {}
+
+            .line {
+
+                &__display {
+                    width: 2em;
+                    height: 1px;
+                }
+
+                &__position {
+                    margin: auto 5px;
+                }
+
+                &__view {
+                    background-color: $nabthatColor;
+                }
+            }
+
+            h2 {
+                color: $nabthatColor;
+                font-weight: normal;
+            }
+
+        }
+
+        .show-settings {
+
+
+
+            &__display {}
+
+            &__position {
+                margin-right: $footerItemsLefrRightMargin;
+            }
+
+            &__view {}
+
+            .show-button {
+
+                &__display {
+                    width: $buttonWidth;
+                    height: $buttonHeight;
+                    display: flex;
+                }
+
+                &__position {
+                    position: relative;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 4vw 0;
+                }
+
+                &__view {
+                    text-transform: uppercase;
+                    border: 1px solid $buttonBorderColor;
+                    border-radius: 3px;
+                    background-color: $buttonBackgroundColor;
+                    color: $buttonFontColor;
+                    font-weight: 900;
+                    font-size: $buttonFontSize;
+                }
+
+                &:hover {
+                    border-color: $buttonHoverBorderColor;
+                    color: $buttonHoverFontColor;
+                    cursor: pointer;
+                }
+
+
+            }
+
+            .showIt {
+                &:focus~.show-block {
+                    animation-name: showItt;
+                    animation-duration: 0.3s;
+                    animation-fill-mode: forwards;
+                    animation-iteration-count: 1;
+                    display: block;
+                    z-index: -2;
+                }
+
+                &:focus {
+
+
+                    &::after {
+                        content: "";
+                        width: $buttonWidth;
+                        height: calc($footerHeight + $footerBorderWidth);
+                        border-top: $footerBorderWidth solid $footerBorderColor;
+                        background-color: $footerBackgroundColor;
+                        position: absolute;
+                        z-index: -1;
+                    }
+                }
+
+                @keyframes showItt {
+                    from {
+                        bottom: 0;
+                    }
+
+                    to {
+                        bottom: calc($footerHeight + $footerBorderWidth);
+                    }
+                }
+            }
+
+            .hideIt {
+                &:focus~.show-block {
+                    animation-name: hideItt;
+                    animation-duration: 0.3s;
+                    animation-fill-mode: forwards;
+                    animation-iteration-count: 1;
+                    display: none;
+                    z-index: -2;
+                }
+
+                &:focus {
+
+
+                    &::after {
+                        content: "";
+                        width: $buttonWidth;
+                        height: calc($footerHeight + $footerBorderWidth);
+                        border-top: $footerBorderWidth solid $footerBorderColor;
+                        background-color: $footerBackgroundColor;
+                        position: absolute;
+                        z-index: -1;
+                    }
+                }
+
+                @keyframes hideItt {
+                    from {
+                        bottom: calc($footerHeight + $footerBorderWidth);
+                    }
+
+                    to {
+                        bottom: 0;
+                    }
+                }
+            }
+
+            .show-block {
+
+                &__display {
+                    display: none;
+                    width: $buttonWidth;
+                }
+
+                &__position {
+                    position: absolute;
+                    right: $footerItemsLefrRightMargin;
+                    bottom: calc($footerHeight + $footerBorderWidth);
+                }
+
+                &__view {
+                    background-color: $showSettingsBackgroundColor;
+                    color: $showSettingsFontColor;
+                    list-style-image: url('https://fontawesome.com/icons/chevron-right?f=classic&s=solid');
+                    text-transform: uppercase;
+                    box-shadow: 0px 0px 13px 7px $footerBackgroundColor;
+                    font-size: $buttonFontSize;
+                }
+
+                .settings-text {
+                    color: $showSettingsFontColor;
+
+                    &:hover {
+                        color: $showSettingsHoverFontColor;
+                        cursor: pointer;
+                    }
+                }
+            }
+
+
+
+        }
+
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    $headerHeight: 16vw;
+    $footerHeight: 15vw;
+    $cssAwesomeDimention: 10vw;
+    $cssAwesomeBorderWidth: 2px;
+    $buttonWidth: 25vw;
+    $buttonHeight: 2vw;
+    $buttonFontSize: 1.5vw;
+
+    .footer {
+        &__display {
+            height: $footerHeight;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            z-index: 2;
+        }
+
+        &__position {
+            position: relative;
+        }
+
+        &__view {
+            background-color: $footerBackgroundColor;
+            border-top: $footerBorderWidth solid $footerBorderColor;
+        }
+
+        .css-is-awesome {
+            &__display {
+                left: $footerItemsLefrRightMargin;
+                display: flex;
+                align-items: center;
+            }
+
+            &__position {
+                position: relative;
+                z-index: 1;
+            }
+
+            &__view {
+                width: $cssAwesomeDimention;
+                height: $cssAwesomeDimention;
+                border: $cssAwesomeBorderWidth solid $cssAwesomeColor;
+            }
+
+            &:hover {
+                border-color: $hoverBorderColor;
+                rotate: 360deg;
+                transition: rotate 1s;
+                cursor: pointer;
+            }
+
+            &:hover~.css-is-awesome-text {
+                color: $hoverFontColor;
+            }
+
+        }
+
+        .css-is-awesome-text {
+            &__display {
+                left: 0;
+            }
+
+            &__position {
+                position: absolute;
+            }
+
+            &__view {
+                text-transform: uppercase;
+                padding-left: calc(calc($cssAwesomeDimention / 10) + $footerItemsLefrRightMargin);
+                font-size: calc($cssAwesomeDimention / 4.5);
+                color: $cssAwesomeColor;
+                letter-spacing: calc($cssAwesomeDimention / 80);
+            }
+        }
+
+        .nabthat {
+            &__display {
+                display: none;
+                flex-direction: row;
+            }
+
+            &__position {}
+
+            &__view {}
+
+            .line {
+
+                &__display {
+                    width: 2em;
+                    height: 1px;
+                }
+
+                &__position {
+                    margin: auto 5px;
+                }
+
+                &__view {
+                    background-color: $nabthatColor;
+                }
+            }
+
+            h2 {
+                color: $nabthatColor;
+                font-weight: normal;
+            }
+
+        }
+
+        .show-settings {
+
+
+
+            &__display {}
+
+            &__position {
+                margin-right: $footerItemsLefrRightMargin;
+            }
+
+            &__view {}
+
+            .show-button {
+
+                &__display {
+                    width: $buttonWidth;
+                    height: $buttonHeight;
+                    display: flex;
+                }
+
+                &__position {
+                    position: relative;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 3vw 0;
+                }
+
+                &__view {
+                    text-transform: uppercase;
+                    border: 1px solid $buttonBorderColor;
+                    border-radius: 3px;
+                    background-color: $buttonBackgroundColor;
+                    color: $buttonFontColor;
+                    font-weight: 900;
+                    font-size: $buttonFontSize;
+                }
+
+                &:hover {
+                    border-color: $buttonHoverBorderColor;
+                    color: $buttonHoverFontColor;
+                    cursor: pointer;
+                }
+
+
+            }
+
+            .showIt {
+                &:focus~.show-block {
+                    animation-name: showIttt;
+                    animation-duration: 0.3s;
+                    animation-fill-mode: forwards;
+                    animation-iteration-count: 1;
+                    display: block;
+                    z-index: -2;
+                }
+
+                &:focus {
+
+
+                    &::after {
+                        content: "";
+                        width: $buttonWidth;
+                        height: calc($footerHeight + $footerBorderWidth);
+                        border-top: $footerBorderWidth solid $footerBorderColor;
+                        background-color: $footerBackgroundColor;
+                        position: absolute;
+                        z-index: -1;
+                    }
+                }
+
+                @keyframes showIttt {
+                    from {
+                        bottom: 0;
+                    }
+
+                    to {
+                        bottom: calc($footerHeight + $footerBorderWidth);
+                    }
+                }
+            }
+
+            .hideIt {
+                &:focus~.show-block {
+                    animation-name: hideIttt;
+                    animation-duration: 0.3s;
+                    animation-fill-mode: forwards;
+                    animation-iteration-count: 1;
+                    display: none;
+                    z-index: -2;
+                }
+
+                &:focus {
+
+
+                    &::after {
+                        content: "";
+                        width: $buttonWidth;
+                        height: calc($footerHeight + $footerBorderWidth);
+                        border-top: $footerBorderWidth solid $footerBorderColor;
+                        background-color: $footerBackgroundColor;
+                        position: absolute;
+                        z-index: -1;
+                    }
+                }
+
+                @keyframes hideIttt {
+                    from {
+                        bottom: calc($footerHeight + $footerBorderWidth);
+                    }
+
+                    to {
+                        bottom: 0;
+                    }
+                }
+            }
+
+            .show-block {
+
+                &__display {
+                    display: none;
+                    width: $buttonWidth;
+                }
+
+                &__position {
+                    position: absolute;
+                    right: $footerItemsLefrRightMargin;
+                    bottom: calc($footerHeight + $footerBorderWidth);
+                }
+
+                &__view {
+                    background-color: $showSettingsBackgroundColor;
+                    color: $showSettingsFontColor;
+                    list-style-image: url('https://fontawesome.com/icons/chevron-right?f=classic&s=solid');
+                    text-transform: uppercase;
+                    box-shadow: 0px 0px 13px 7px $footerBackgroundColor;
+                    font-size: $buttonFontSize;
+                }
+
+                .settings-text {
+                    color: $showSettingsFontColor;
+
+                    &:hover {
+                        color: $showSettingsHoverFontColor;
+                        cursor: pointer;
+                    }
+                }
+            }
+
+
+
+        }
+
+    }
+}
+
+@media (min-width: 1200px) {
+    $headerHeight: 10em;
+    $footerHeight: 10em;
+    $cssAwesomeDimention: 6em;
+    $cssAwesomeBorderWidth: 2px;
+    $buttonWidth: 20em;
+    $buttonHeight: 2em;
+    $buttonFontSize: 1em;
+
+    .footer {
+        &__display {
+            height: $footerHeight;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            z-index: 2;
+        }
+
+        &__position {
+            position: relative;
+        }
+
+        &__view {
+            background-color: $footerBackgroundColor;
+            border-top: $footerBorderWidth solid $footerBorderColor;
+        }
+
+        .css-is-awesome {
+            &__display {
+                left: $footerItemsLefrRightMargin;
+                display: flex;
+                align-items: center;
+            }
+
+            &__position {
+                position: relative;
+                z-index: 1;
+            }
+
+            &__view {
+                width: $cssAwesomeDimention;
+                height: $cssAwesomeDimention;
+                border: $cssAwesomeBorderWidth solid $cssAwesomeColor;
+            }
+
+            &:hover {
+                border-color: $hoverBorderColor;
+                rotate: 360deg;
+                transition: rotate 1s;
+                cursor: pointer;
+            }
+
+            &:hover~.css-is-awesome-text {
+                color: $hoverFontColor;
+            }
+
+        }
+
+        .css-is-awesome-text {
+            &__display {
+                left: 0;
+            }
+
+            &__position {
+                position: absolute;
+            }
+
+            &__view {
+                text-transform: uppercase;
+                padding-left: calc(calc($cssAwesomeDimention / 20) + $footerItemsLefrRightMargin);
+                font-size: calc($cssAwesomeDimention / 4.5);
+                color: $cssAwesomeColor;
+                letter-spacing: calc($cssAwesomeDimention / 80);
+            }
+        }
+
+        .nabthat {
+            &__display {
+                display: flex;
+                flex-direction: row;
+            }
+
+            &__position {}
+
+            &__view {}
+
+            .line {
+
+                &__display {
+                    width: 2em;
+                    height: 1px;
+                }
+
+                &__position {
+                    margin: auto 5px;
+                }
+
+                &__view {
+                    background-color: $nabthatColor;
+                }
+            }
+
+            h2 {
+                color: $nabthatColor;
+                font-weight: normal;
+            }
+
+        }
+
+        .show-settings {
+
+
+
+            &__display {}
+
+            &__position {
+                margin-right: $footerItemsLefrRightMargin;
+            }
+
+            &__view {}
+
+            .show-button {
+
+                &__display {
+                    width: $buttonWidth;
+                    height: $buttonHeight;
+                    display: flex;
+                }
+
+                &__position {
+                    position: relative;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 2em 0;
+                }
+
+                &__view {
+                    text-transform: uppercase;
+                    border: 1px solid $buttonBorderColor;
+                    border-radius: 3px;
+                    background-color: $buttonBackgroundColor;
+                    color: $buttonFontColor;
+                    font-weight: 900;
+                    font-size: $buttonFontSize;
+                }
+
+                &:hover {
+                    border-color: $buttonHoverBorderColor;
+                    color: $buttonHoverFontColor;
+                    cursor: pointer;
+                }
+
+
+            }
+
+            .showIt {
+                &:focus~.show-block {
+                    animation-name: showItttt;
+                    animation-duration: 0.3s;
+                    animation-fill-mode: forwards;
+                    animation-iteration-count: 1;
+                    display: block;
+                    z-index: -2;
+                }
+
+                &:focus {
+
+
+                    &::after {
+                        content: "";
+                        width: $buttonWidth;
+                        height: calc($footerHeight + $footerBorderWidth);
+                        border-top: $footerBorderWidth solid $footerBorderColor;
+                        background-color: $footerBackgroundColor;
+                        position: absolute;
+                        z-index: -1;
+                    }
+                }
+
+                @keyframes showItttt {
+                    from {
+                        bottom: 0;
+                    }
+
+                    to {
+                        bottom: calc($footerHeight + $footerBorderWidth);
+                    }
+                }
+            }
+
+            .hideIt {
+                &:focus~.show-block {
+                    animation-name: hideItttt;
+                    animation-duration: 0.3s;
+                    animation-fill-mode: forwards;
+                    animation-iteration-count: 1;
+                    display: none;
+                    z-index: -2;
+                }
+
+                &:focus {
+
+
+                    &::after {
+                        content: "";
+                        width: $buttonWidth;
+                        height: calc($footerHeight + $footerBorderWidth);
+                        border-top: $footerBorderWidth solid $footerBorderColor;
+                        background-color: $footerBackgroundColor;
+                        position: absolute;
+                        z-index: -1;
+                    }
+                }
+
+                @keyframes hideItttt {
+                    from {
+                        bottom: calc($footerHeight + $footerBorderWidth);
+                    }
+
+                    to {
+                        bottom: 0;
+                    }
+                }
+            }
+
+            .show-block {
+
+                &__display {
+                    display: none;
+                    width: $buttonWidth;
+                }
+
+                &__position {
+                    position: absolute;
+                    right: $footerItemsLefrRightMargin;
+                    bottom: calc($footerHeight + $footerBorderWidth);
+                }
+
+                &__view {
+                    background-color: $showSettingsBackgroundColor;
+                    color: $showSettingsFontColor;
+                    list-style-image: url('https://fontawesome.com/icons/chevron-right?f=classic&s=solid');
+                    text-transform: uppercase;
+                    box-shadow: 0px 0px 13px 7px $footerBackgroundColor;
+                    font-size: $buttonFontSize;
+                }
+
+                .settings-text {
+                    color: $showSettingsFontColor;
+
+                    &:hover {
+                        color: $showSettingsHoverFontColor;
+                        cursor: pointer;
+                    }
+                }
+            }
+
+
+
+        }
+
+    }
 }

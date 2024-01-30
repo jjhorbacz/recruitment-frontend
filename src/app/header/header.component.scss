@@ -1,5 +1,7 @@
-@import "../app.component.scss";
-
+$mainFont: 'Open Sans', sans-serif;
+$mainFontColor: #fff;
+$secondFontColor: #a3a8b5;
+$headerHeight: 22vw;
 $headerBackgroundColor: #0b0c10;
 $headerIconColor: #fff;
 $headerIconSize: 11vw;
@@ -8,6 +10,7 @@ $headerIconWidth: 15vw;
 $headerIconHeight: 14vw;
 $headerIconMarginLeft: 0.3em;
 $headerIconHoverBackgroundColor: #e78301;
+$headerHeadlingSize: 3vw;
 
 .header {
 
@@ -74,9 +77,199 @@ $headerIconHoverBackgroundColor: #e78301;
             }
 
             &__view {
-                font-size: 3vw;
+                font-size: $headerHeadlingSize;
             }
 
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    $headerHeight: 18vw;
+    $headerIconSize: 8vw;
+    $headerIconWidth: 11vw;
+    $headerIconHeight: 10vw;
+    $headerIconMarginLeft: 0.3em;
+    $headerHeadlingSize: 2.5vw;
+
+    .header {
+
+        &__display {}
+
+        &__position {
+            height: $headerHeight;
+        }
+
+        &__view {}
+
+        .header-logo {
+
+            &__display {
+                width: $headerIconWidth;
+                height: $headerIconHeight;
+            }
+
+            &__position {
+                padding-top: calc($headerIconWidth - $headerIconHeight);
+                margin-left: $headerIconMarginLeft;
+            }
+
+            &__view {
+                font-size: $headerIconSize;
+
+                &:hover {}
+            }
+        }
+
+        .header-title {
+            &__display {}
+
+            &__position {
+                right: 2em;
+            }
+
+            &__view {}
+
+            .header-title-text {
+
+                &__display {}
+
+                &__position {
+                    margin: 0;
+                }
+
+                &__view {
+                    font-size: $headerHeadlingSize;
+                }
+
+            }
+        }
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    $headerHeight: 16vw;
+    $headerIconSize: 7vw;
+    $headerIconWidth: 10vw;
+    $headerIconHeight: 9vw;
+    $headerIconMarginLeft: 0.3em;
+    $headerHeadlingSize: 2vw;
+
+    .header {
+
+        &__display {}
+
+        &__position {
+            height: $headerHeight;
+        }
+
+        &__view {}
+
+        .header-logo {
+
+            &__display {
+                width: $headerIconWidth;
+                height: $headerIconHeight;
+            }
+
+            &__position {
+                padding-top: calc($headerIconWidth - $headerIconHeight);
+                margin-left: $headerIconMarginLeft;
+            }
+
+            &__view {
+                font-size: $headerIconSize;
+
+                &:hover {}
+            }
+        }
+
+        .header-title {
+            &__display {}
+
+            &__position {
+                right: 2em;
+            }
+
+            &__view {}
+
+            .header-title-text {
+
+                &__display {}
+
+                &__position {
+                    margin: 0;
+                }
+
+                &__view {
+                    font-size: $headerHeadlingSize;
+                }
+
+            }
+        }
+    }
+
+}
+
+@media (min-width: 1200px) {
+    $headerHeight: 10em;
+    $headerIconSize: 5em;
+    $headerIconWidth: 1.5em;
+    $headerIconHeight: 1.4em;
+    $headerIconMarginLeft: 0.3em;
+    $headerHeadlingSize: 1.5em;
+
+    .header {
+
+        &__display {}
+
+        &__position {
+            height: $headerHeight;
+        }
+
+        &__view {}
+
+        .header-logo {
+
+            &__display {
+                width: $headerIconWidth;
+                height: $headerIconHeight;
+            }
+
+            &__position {
+                padding-top: calc($headerIconWidth - $headerIconHeight);
+                margin-left: $headerIconMarginLeft;
+            }
+
+            &__view {
+                font-size: $headerIconSize;
+
+                &:hover {}
+            }
+        }
+
+        .header-title {
+            &__display {}
+
+            &__position {
+                right: 2em;
+            }
+
+            &__view {}
+
+            .header-title-text {
+
+                &__display {}
+
+                &__position {
+                    margin: 0;
+                }
+
+                &__view {
+                    font-size: $headerHeadlingSize;
+                }
+
+            }
         }
     }
 }

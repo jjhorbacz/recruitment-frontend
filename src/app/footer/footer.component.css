@@ -1,18 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans");
-app-root {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  height: 100vh;
-}
-
 body {
   margin: 0;
   font-family: "Open Sans", sans-serif;
@@ -23,15 +8,18 @@ a {
   color: #fff;
 }
 
+app-footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
 .footer__display {
   height: 20vw;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -39,6 +27,9 @@ a {
 }
 .footer__position {
   position: relative;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .footer__view {
   background-color: #15161a;
@@ -91,6 +82,11 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  width: 200px;
+}
+.footer .nabthat__position {
+  position: absolute;
+  left: calc(50vw - 100px);
 }
 .footer .nabthat .line__display {
   width: 2em;
@@ -133,6 +129,7 @@ a {
   background-color: #15161a;
   color: #a3a9b5;
   font-weight: 900;
+  font-size: 2.5vw;
 }
 .footer .show-settings .show-button:hover {
   border-color: #fff;
@@ -229,6 +226,7 @@ a {
   text-transform: uppercase;
   -webkit-box-shadow: 0px 0px 13px 7px #15161a;
           box-shadow: 0px 0px 13px 7px #15161a;
+  font-size: 2.5vw;
 }
 .footer .show-settings .show-block .settings-text {
   color: #141517;
@@ -236,4 +234,652 @@ a {
 .footer .show-settings .show-block .settings-text:hover {
   color: #e88301;
   cursor: pointer;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .footer__display {
+    height: 18vw;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    z-index: 2;
+  }
+  .footer__position {
+    position: relative;
+  }
+  .footer__view {
+    background-color: #15161a;
+    border-top: 3px solid #0a0b0d;
+  }
+  .footer .css-is-awesome__display {
+    left: 3vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .footer .css-is-awesome__position {
+    position: relative;
+    z-index: 1;
+  }
+  .footer .css-is-awesome__view {
+    width: 12vw;
+    height: 12vw;
+    border: 2px solid #2c2d32;
+  }
+  .footer .css-is-awesome:hover {
+    border-color: #b18d5d;
+    rotate: 360deg;
+    -webkit-transition: rotate 1s;
+    transition: rotate 1s;
+    cursor: pointer;
+  }
+  .footer .css-is-awesome:hover ~ .css-is-awesome-text {
+    color: #a4a8b4;
+  }
+  .footer .css-is-awesome-text__display {
+    left: 0;
+  }
+  .footer .css-is-awesome-text__position {
+    position: absolute;
+  }
+  .footer .css-is-awesome-text__view {
+    text-transform: uppercase;
+    padding-left: 4.2vw;
+    font-size: 2.6666666667vw;
+    color: #2c2d32;
+    letter-spacing: 0.15vw;
+  }
+  .footer .nabthat__display {
+    display: none;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .footer .nabthat .line__display {
+    width: 2em;
+    height: 1px;
+  }
+  .footer .nabthat .line__position {
+    margin: auto 5px;
+  }
+  .footer .nabthat .line__view {
+    background-color: #2c2d32;
+  }
+  .footer .nabthat h2 {
+    color: #2c2d32;
+    font-weight: normal;
+  }
+  .footer .show-settings__position {
+    margin-right: 3vw;
+  }
+  .footer .show-settings .show-button__display {
+    width: 35vw;
+    height: 3vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .footer .show-settings .show-button__position {
+    position: relative;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 4vw 0;
+  }
+  .footer .show-settings .show-button__view {
+    text-transform: uppercase;
+    border: 1px solid #2c2d32;
+    border-radius: 3px;
+    background-color: #15161a;
+    color: #a3a9b5;
+    font-weight: 900;
+    font-size: 2vw;
+  }
+  .footer .show-settings .show-button:hover {
+    border-color: #fff;
+    color: #fff;
+    cursor: pointer;
+  }
+  .footer .show-settings .showIt:focus ~ .show-block {
+    -webkit-animation-name: showItt;
+            animation-name: showItt;
+    -webkit-animation-duration: 0.3s;
+            animation-duration: 0.3s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+    -webkit-animation-iteration-count: 1;
+            animation-iteration-count: 1;
+    display: block;
+    z-index: -2;
+  }
+  .footer .show-settings .showIt:focus::after {
+    content: "";
+    width: 35vw;
+    height: calc(18vw + 3px);
+    border-top: 3px solid #0a0b0d;
+    background-color: #15161a;
+    position: absolute;
+    z-index: -1;
+  }
+  @-webkit-keyframes showItt {
+    from {
+      bottom: 0;
+    }
+    to {
+      bottom: calc(18vw + 3px);
+    }
+  }
+  @keyframes showItt {
+    from {
+      bottom: 0;
+    }
+    to {
+      bottom: calc(18vw + 3px);
+    }
+  }
+  .footer .show-settings .hideIt:focus ~ .show-block {
+    -webkit-animation-name: hideItt;
+            animation-name: hideItt;
+    -webkit-animation-duration: 0.3s;
+            animation-duration: 0.3s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+    -webkit-animation-iteration-count: 1;
+            animation-iteration-count: 1;
+    display: none;
+    z-index: -2;
+  }
+  .footer .show-settings .hideIt:focus::after {
+    content: "";
+    width: 35vw;
+    height: calc(18vw + 3px);
+    border-top: 3px solid #0a0b0d;
+    background-color: #15161a;
+    position: absolute;
+    z-index: -1;
+  }
+  @-webkit-keyframes hideItt {
+    from {
+      bottom: calc(18vw + 3px);
+    }
+    to {
+      bottom: 0;
+    }
+  }
+  @keyframes hideItt {
+    from {
+      bottom: calc(18vw + 3px);
+    }
+    to {
+      bottom: 0;
+    }
+  }
+  .footer .show-settings .show-block__display {
+    display: none;
+    width: 35vw;
+  }
+  .footer .show-settings .show-block__position {
+    position: absolute;
+    right: 3vw;
+    bottom: calc(18vw + 3px);
+  }
+  .footer .show-settings .show-block__view {
+    background-color: #fff;
+    color: #141517;
+    list-style-image: url("https://fontawesome.com/icons/chevron-right?f=classic&s=solid");
+    text-transform: uppercase;
+    -webkit-box-shadow: 0px 0px 13px 7px #15161a;
+            box-shadow: 0px 0px 13px 7px #15161a;
+    font-size: 2vw;
+  }
+  .footer .show-settings .show-block .settings-text {
+    color: #141517;
+  }
+  .footer .show-settings .show-block .settings-text:hover {
+    color: #e88301;
+    cursor: pointer;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .footer__display {
+    height: 15vw;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    z-index: 2;
+  }
+  .footer__position {
+    position: relative;
+  }
+  .footer__view {
+    background-color: #15161a;
+    border-top: 3px solid #0a0b0d;
+  }
+  .footer .css-is-awesome__display {
+    left: 3vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .footer .css-is-awesome__position {
+    position: relative;
+    z-index: 1;
+  }
+  .footer .css-is-awesome__view {
+    width: 10vw;
+    height: 10vw;
+    border: 2px solid #2c2d32;
+  }
+  .footer .css-is-awesome:hover {
+    border-color: #b18d5d;
+    rotate: 360deg;
+    -webkit-transition: rotate 1s;
+    transition: rotate 1s;
+    cursor: pointer;
+  }
+  .footer .css-is-awesome:hover ~ .css-is-awesome-text {
+    color: #a4a8b4;
+  }
+  .footer .css-is-awesome-text__display {
+    left: 0;
+  }
+  .footer .css-is-awesome-text__position {
+    position: absolute;
+  }
+  .footer .css-is-awesome-text__view {
+    text-transform: uppercase;
+    padding-left: 4vw;
+    font-size: 2.2222222222vw;
+    color: #2c2d32;
+    letter-spacing: 0.125vw;
+  }
+  .footer .nabthat__display {
+    display: none;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .footer .nabthat .line__display {
+    width: 2em;
+    height: 1px;
+  }
+  .footer .nabthat .line__position {
+    margin: auto 5px;
+  }
+  .footer .nabthat .line__view {
+    background-color: #2c2d32;
+  }
+  .footer .nabthat h2 {
+    color: #2c2d32;
+    font-weight: normal;
+  }
+  .footer .show-settings__position {
+    margin-right: 3vw;
+  }
+  .footer .show-settings .show-button__display {
+    width: 25vw;
+    height: 2vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .footer .show-settings .show-button__position {
+    position: relative;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 3vw 0;
+  }
+  .footer .show-settings .show-button__view {
+    text-transform: uppercase;
+    border: 1px solid #2c2d32;
+    border-radius: 3px;
+    background-color: #15161a;
+    color: #a3a9b5;
+    font-weight: 900;
+    font-size: 1.5vw;
+  }
+  .footer .show-settings .show-button:hover {
+    border-color: #fff;
+    color: #fff;
+    cursor: pointer;
+  }
+  .footer .show-settings .showIt:focus ~ .show-block {
+    -webkit-animation-name: showIttt;
+            animation-name: showIttt;
+    -webkit-animation-duration: 0.3s;
+            animation-duration: 0.3s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+    -webkit-animation-iteration-count: 1;
+            animation-iteration-count: 1;
+    display: block;
+    z-index: -2;
+  }
+  .footer .show-settings .showIt:focus::after {
+    content: "";
+    width: 25vw;
+    height: calc(15vw + 3px);
+    border-top: 3px solid #0a0b0d;
+    background-color: #15161a;
+    position: absolute;
+    z-index: -1;
+  }
+  @-webkit-keyframes showIttt {
+    from {
+      bottom: 0;
+    }
+    to {
+      bottom: calc(15vw + 3px);
+    }
+  }
+  @keyframes showIttt {
+    from {
+      bottom: 0;
+    }
+    to {
+      bottom: calc(15vw + 3px);
+    }
+  }
+  .footer .show-settings .hideIt:focus ~ .show-block {
+    -webkit-animation-name: hideIttt;
+            animation-name: hideIttt;
+    -webkit-animation-duration: 0.3s;
+            animation-duration: 0.3s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+    -webkit-animation-iteration-count: 1;
+            animation-iteration-count: 1;
+    display: none;
+    z-index: -2;
+  }
+  .footer .show-settings .hideIt:focus::after {
+    content: "";
+    width: 25vw;
+    height: calc(15vw + 3px);
+    border-top: 3px solid #0a0b0d;
+    background-color: #15161a;
+    position: absolute;
+    z-index: -1;
+  }
+  @-webkit-keyframes hideIttt {
+    from {
+      bottom: calc(15vw + 3px);
+    }
+    to {
+      bottom: 0;
+    }
+  }
+  @keyframes hideIttt {
+    from {
+      bottom: calc(15vw + 3px);
+    }
+    to {
+      bottom: 0;
+    }
+  }
+  .footer .show-settings .show-block__display {
+    display: none;
+    width: 25vw;
+  }
+  .footer .show-settings .show-block__position {
+    position: absolute;
+    right: 3vw;
+    bottom: calc(15vw + 3px);
+  }
+  .footer .show-settings .show-block__view {
+    background-color: #fff;
+    color: #141517;
+    list-style-image: url("https://fontawesome.com/icons/chevron-right?f=classic&s=solid");
+    text-transform: uppercase;
+    -webkit-box-shadow: 0px 0px 13px 7px #15161a;
+            box-shadow: 0px 0px 13px 7px #15161a;
+    font-size: 1.5vw;
+  }
+  .footer .show-settings .show-block .settings-text {
+    color: #141517;
+  }
+  .footer .show-settings .show-block .settings-text:hover {
+    color: #e88301;
+    cursor: pointer;
+  }
+}
+@media (min-width: 1200px) {
+  .footer__display {
+    height: 10em;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    z-index: 2;
+  }
+  .footer__position {
+    position: relative;
+  }
+  .footer__view {
+    background-color: #15161a;
+    border-top: 3px solid #0a0b0d;
+  }
+  .footer .css-is-awesome__display {
+    left: 3vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .footer .css-is-awesome__position {
+    position: relative;
+    z-index: 1;
+  }
+  .footer .css-is-awesome__view {
+    width: 6em;
+    height: 6em;
+    border: 2px solid #2c2d32;
+  }
+  .footer .css-is-awesome:hover {
+    border-color: #b18d5d;
+    rotate: 360deg;
+    -webkit-transition: rotate 1s;
+    transition: rotate 1s;
+    cursor: pointer;
+  }
+  .footer .css-is-awesome:hover ~ .css-is-awesome-text {
+    color: #a4a8b4;
+  }
+  .footer .css-is-awesome-text__display {
+    left: 0;
+  }
+  .footer .css-is-awesome-text__position {
+    position: absolute;
+  }
+  .footer .css-is-awesome-text__view {
+    text-transform: uppercase;
+    padding-left: calc(0.3em + 3vw);
+    font-size: 1.3333333333em;
+    color: #2c2d32;
+    letter-spacing: 0.075em;
+  }
+  .footer .nabthat__display {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .footer .nabthat .line__display {
+    width: 2em;
+    height: 1px;
+  }
+  .footer .nabthat .line__position {
+    margin: auto 5px;
+  }
+  .footer .nabthat .line__view {
+    background-color: #2c2d32;
+  }
+  .footer .nabthat h2 {
+    color: #2c2d32;
+    font-weight: normal;
+  }
+  .footer .show-settings__position {
+    margin-right: 3vw;
+  }
+  .footer .show-settings .show-button__display {
+    width: 20em;
+    height: 2em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .footer .show-settings .show-button__position {
+    position: relative;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 2em 0;
+  }
+  .footer .show-settings .show-button__view {
+    text-transform: uppercase;
+    border: 1px solid #2c2d32;
+    border-radius: 3px;
+    background-color: #15161a;
+    color: #a3a9b5;
+    font-weight: 900;
+    font-size: 1em;
+  }
+  .footer .show-settings .show-button:hover {
+    border-color: #fff;
+    color: #fff;
+    cursor: pointer;
+  }
+  .footer .show-settings .showIt:focus ~ .show-block {
+    -webkit-animation-name: showItttt;
+            animation-name: showItttt;
+    -webkit-animation-duration: 0.3s;
+            animation-duration: 0.3s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+    -webkit-animation-iteration-count: 1;
+            animation-iteration-count: 1;
+    display: block;
+    z-index: -2;
+  }
+  .footer .show-settings .showIt:focus::after {
+    content: "";
+    width: 20em;
+    height: calc(10em + 3px);
+    border-top: 3px solid #0a0b0d;
+    background-color: #15161a;
+    position: absolute;
+    z-index: -1;
+  }
+  @-webkit-keyframes showItttt {
+    from {
+      bottom: 0;
+    }
+    to {
+      bottom: calc(10em + 3px);
+    }
+  }
+  @keyframes showItttt {
+    from {
+      bottom: 0;
+    }
+    to {
+      bottom: calc(10em + 3px);
+    }
+  }
+  .footer .show-settings .hideIt:focus ~ .show-block {
+    -webkit-animation-name: hideItttt;
+            animation-name: hideItttt;
+    -webkit-animation-duration: 0.3s;
+            animation-duration: 0.3s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+    -webkit-animation-iteration-count: 1;
+            animation-iteration-count: 1;
+    display: none;
+    z-index: -2;
+  }
+  .footer .show-settings .hideIt:focus::after {
+    content: "";
+    width: 20em;
+    height: calc(10em + 3px);
+    border-top: 3px solid #0a0b0d;
+    background-color: #15161a;
+    position: absolute;
+    z-index: -1;
+  }
+  @-webkit-keyframes hideItttt {
+    from {
+      bottom: calc(10em + 3px);
+    }
+    to {
+      bottom: 0;
+    }
+  }
+  @keyframes hideItttt {
+    from {
+      bottom: calc(10em + 3px);
+    }
+    to {
+      bottom: 0;
+    }
+  }
+  .footer .show-settings .show-block__display {
+    display: none;
+    width: 20em;
+  }
+  .footer .show-settings .show-block__position {
+    position: absolute;
+    right: 3vw;
+    bottom: calc(10em + 3px);
+  }
+  .footer .show-settings .show-block__view {
+    background-color: #fff;
+    color: #141517;
+    list-style-image: url("https://fontawesome.com/icons/chevron-right?f=classic&s=solid");
+    text-transform: uppercase;
+    -webkit-box-shadow: 0px 0px 13px 7px #15161a;
+            box-shadow: 0px 0px 13px 7px #15161a;
+    font-size: 1em;
+  }
+  .footer .show-settings .show-block .settings-text {
+    color: #141517;
+  }
+  .footer .show-settings .show-block .settings-text:hover {
+    color: #e88301;
+    cursor: pointer;
+  }
 }
