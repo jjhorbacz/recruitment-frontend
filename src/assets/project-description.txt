@@ -1,0 +1,44 @@
+Rekrutacja Nabthat
+Jakub Horbacz
+
+Link do Repozytorium: https://github.com/jjhorbacz/recruitment-frontend
+
+Cele zrealizowano:
+
+- Pocięta strona wypełnia całe okno przeglądarki. Zastosowano breakpointy: 768px, 992px oraz 1200px.
+- Header jest przyklejony do topu, Logo linkuje do "/".
+- Raddiobuttony doklejają lub zmieniają linie tekstu. 
+Opcja pierwsza wybiera treść pierwszą z pliku JSON. 
+Opcja druga, drugą. 
+Opcja trzecia losową, unikalną. 
+Treści znajdują się w tagu <p></p> .
+- Button 'pokaż' wysuwa ramkę z dwoma opcjami. 
+Pierwsza przywraca stronę do ustawień początkowych. 
+Druga dokleja imię i nazwisko.
+- Plik JSON przechowuje 6 elementów.
+- Nie użyto bootstrapa etc
+- Zastosowano preprocesor SCSS
+- Poniżej 960px zastosowano przykład projektu mobilnego.
+- Zastosowano wszystkie efekty wizualne z projektu, wszystkie :hovery
+
+Dodatkowo:
+
+- Osadzono zadanie w Angular.
+- Grafiki pobierane są z https://fontawesome.com/
+- Ramka w footerze wykonuje obrót, bez tekstu.
+- Zastosowano BEM.
+- Zastosowano zasady a11y.
+- Zadbano o responsywność. Mobile i Tablet opierają się na vw,vh. Desktop rem,em.
+- Mobile first
+- Strona wyświetla alerty w przypadku:
+	- ponownego doklejenia opcją pierwszą
+	- ponownego doklejenia opcją drugą
+	- doklejeniu pełnej listy
+	- chęci zmiany ostatniego elementu, choć zostały doklejone już wszystkie
+- Button w footerze wysuwa i wsuwa ramkę za pomocą css. Przy zastosowaniu focusa i animacji css.
+Skrypty pozwalają na "niechowanie" się ramki bo odebraniu focusa z przycisku.
+- prace wrzucono na netlify: https://jakub-horbacz-nabthat.netlify.app/
+oraz na własny serwer: https://cybermat.pl/projects/nabthat-recruitment/
+- Opcja druga w dolnej ramce pozwala na doklejanie i usuwanie imienia i nazwiska,
+zmienia treść w zależności interakcji
+- Przycisk zmienia ikonkę w zależności od interakcji

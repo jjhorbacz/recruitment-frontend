@@ -18,9 +18,21 @@ $buttonFontColor: #a3a9b5;
 $buttonHoverBackgroundColor: #e78301;
 $addTextsColor: #a3a9b5;
 
-.main-content {
+app-main-content {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
     background-color: $contentBackgroundColor;
-    min-height: calc(100vh - $headerHeight - $footerHeight - $footerBorderWidth);
+    z-index: -1;
+}
+
+.main-content {
+    margin-top: $headerHeight;
+    margin-bottom: $footerHeight;
+    background-color: $contentBackgroundColor;
+    min-height: auto;
     padding: 0 $contentPadding;
 
     .main-header {
@@ -261,8 +273,11 @@ $addTextsColor: #a3a9b5;
     $buttonWidth: 25vw;
 
     .main-content {
+
+        margin-top: $headerHeight;
+        margin-bottom: $footerHeight;
+        min-height: auto;
         background-color: $contentBackgroundColor;
-        min-height: calc(100vh - $headerHeight - $footerHeight - $footerBorderWidth);
         padding: 0 $contentPadding;
 
         .main-header {
@@ -458,8 +473,11 @@ $addTextsColor: #a3a9b5;
     $buttonWidth: 15vw;
 
     .main-content {
+
+        margin-top: $headerHeight;
+        margin-bottom: $footerHeight;
+        min-height: auto;
         background-color: $contentBackgroundColor;
-        min-height: calc(100vh - $headerHeight - $footerHeight - $footerBorderWidth);
         padding: 0 $contentPadding;
 
         .main-header {
@@ -655,8 +673,10 @@ $addTextsColor: #a3a9b5;
     $buttonWidth: 10rem;
 
     .main-content {
+        margin-top: $headerHeight;
+        margin-bottom: $footerHeight;
         background-color: $contentBackgroundColor;
-        min-height: calc(100vh - $headerHeight - $footerHeight - $footerBorderWidth);
+        min-height: calc(100% - $headerHeight - $footerHeight);
         padding: 0 $contentPadding;
 
         .main-header {

@@ -12,6 +12,12 @@ $headerIconMarginLeft: 0.3em;
 $headerIconHoverBackgroundColor: #e78301;
 $headerHeadlingSize: 3vw;
 
+app-header {
+    top: 0;
+    position: absolute;
+    width: 100%;
+}
+
 .header {
 
     &__display {

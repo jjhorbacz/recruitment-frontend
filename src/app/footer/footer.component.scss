@@ -36,9 +36,9 @@ a {
 }
 
 app-footer {
+    width: 100%;
     position: absolute;
     bottom: 0;
-    width: 100%;
 }
 
 .footer {
@@ -167,7 +167,7 @@ app-footer {
             }
 
             &__position {
-                position: relative;
+                position: static;
                 justify-content: center;
                 align-items: center;
                 padding: 4vw 0;
@@ -208,11 +208,12 @@ app-footer {
                 &::after {
                     content: "";
                     width: $buttonWidth;
-                    height: calc($footerHeight + $footerBorderWidth);
+                    height: $footerHeight;
                     border-top: $footerBorderWidth solid $footerBorderColor;
                     background-color: $footerBackgroundColor;
                     position: absolute;
                     z-index: -1;
+                    bottom: 0;
                 }
             }
 
@@ -243,11 +244,12 @@ app-footer {
                 &::after {
                     content: "";
                     width: $buttonWidth;
-                    height: calc($footerHeight + $footerBorderWidth);
+                    height: $footerHeight;
                     border-top: $footerBorderWidth solid $footerBorderColor;
                     background-color: $footerBackgroundColor;
                     position: absolute;
                     z-index: -1;
+                    bottom: 0;
                 }
             }
 
@@ -429,7 +431,7 @@ app-footer {
                 }
 
                 &__position {
-                    position: relative;
+                    position: static;
                     justify-content: center;
                     align-items: center;
                     padding: 4vw 0;
@@ -470,11 +472,12 @@ app-footer {
                     &::after {
                         content: "";
                         width: $buttonWidth;
-                        height: calc($footerHeight + $footerBorderWidth);
+                        height: $footerHeight;
                         border-top: $footerBorderWidth solid $footerBorderColor;
                         background-color: $footerBackgroundColor;
                         position: absolute;
                         z-index: -1;
+                        bottom: 0;
                     }
                 }
 
@@ -510,6 +513,7 @@ app-footer {
                         background-color: $footerBackgroundColor;
                         position: absolute;
                         z-index: -1;
+                        bottom: 0;
                     }
                 }
 
@@ -691,7 +695,7 @@ app-footer {
                 }
 
                 &__position {
-                    position: relative;
+                    position: static;
                     justify-content: center;
                     align-items: center;
                     padding: 3vw 0;
@@ -732,11 +736,12 @@ app-footer {
                     &::after {
                         content: "";
                         width: $buttonWidth;
-                        height: calc($footerHeight + $footerBorderWidth);
+                        height: $footerHeight;
                         border-top: $footerBorderWidth solid $footerBorderColor;
                         background-color: $footerBackgroundColor;
                         position: absolute;
                         z-index: -1;
+                        bottom: 0;
                     }
                 }
 
@@ -772,6 +777,7 @@ app-footer {
                         background-color: $footerBackgroundColor;
                         position: absolute;
                         z-index: -1;
+                        bottom: 0;
                     }
                 }
 
@@ -955,7 +961,7 @@ app-footer {
                 }
 
                 &__position {
-                    position: relative;
+                    position: static;
                     justify-content: center;
                     align-items: center;
                     padding: 2em 0;
@@ -996,11 +1002,12 @@ app-footer {
                     &::after {
                         content: "";
                         width: $buttonWidth;
-                        height: calc($footerHeight + $footerBorderWidth);
+                        height: $footerHeight;
                         border-top: $footerBorderWidth solid $footerBorderColor;
                         background-color: $footerBackgroundColor;
                         position: absolute;
                         z-index: -1;
+                        bottom: 0;
                     }
                 }
 
@@ -1036,6 +1043,7 @@ app-footer {
                         background-color: $footerBackgroundColor;
                         position: absolute;
                         z-index: -1;
+                        bottom: 0;
                     }
                 }
 

@@ -1,6 +1,18 @@
-.main-content {
+app-main-content {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
   background-color: #2a2d36;
-  min-height: calc(100vh - 22vw - 20vw - 3px);
+  z-index: -1;
+}
+
+.main-content {
+  margin-top: 22vw;
+  margin-bottom: 20vw;
+  background-color: #2a2d36;
+  min-height: auto;
   padding: 0 4vw;
 }
 .main-content .main-header h1.__position {
@@ -189,8 +201,10 @@
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
   .main-content {
+    margin-top: 18vw;
+    margin-bottom: 18vw;
+    min-height: auto;
     background-color: #2a2d36;
-    min-height: calc(100vh - 18vw - 18vw - 3px);
     padding: 0 4vw;
   }
   .main-content .main-header h1.__position {
@@ -340,8 +354,10 @@
 }
 @media screen and (min-width: 992px) and (max-width: 1199px) {
   .main-content {
+    margin-top: 16vw;
+    margin-bottom: 15vw;
+    min-height: auto;
     background-color: #2a2d36;
-    min-height: calc(100vh - 16vw - 15vw - 3px);
     padding: 0 4vw;
   }
   .main-content .main-header h1.__position {
@@ -491,8 +507,10 @@
 }
 @media screen and (min-width: 1200px) {
   .main-content {
+    margin-top: 10em;
+    margin-bottom: 10em;
     background-color: #2a2d36;
-    min-height: calc(100vh - 10em - 10em - 3px);
+    min-height: calc(100% - 10em - 10em);
     padding: 0 2rem;
   }
   .main-content .main-header h1.__position {

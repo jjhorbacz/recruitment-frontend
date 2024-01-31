@@ -1,13 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans");
-app-root {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  height: 100vh;
+app-header {
+  top: 0;
+  position: absolute;
+  width: 100%;
 }
 
 .header__display {
@@ -152,9 +147,9 @@ a {
 }
 
 app-footer {
+  width: 100%;
   position: absolute;
   bottom: 0;
-  width: 100%;
 }
 
 .footer__display {
@@ -256,7 +251,7 @@ app-footer {
   display: flex;
 }
 .footer .show-settings .show-button__position {
-  position: relative;
+  position: static;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -294,11 +289,12 @@ app-footer {
 .footer .show-settings .showIt:focus::after {
   content: "";
   width: 45vw;
-  height: calc(20vw + 3px);
+  height: 20vw;
   border-top: 3px solid #0a0b0d;
   background-color: #15161a;
   position: absolute;
   z-index: -1;
+  bottom: 0;
 }
 @-webkit-keyframes showIt {
   from {
@@ -331,11 +327,12 @@ app-footer {
 .footer .show-settings .hideIt:focus::after {
   content: "";
   width: 45vw;
-  height: calc(20vw + 3px);
+  height: 20vw;
   border-top: 3px solid #0a0b0d;
   background-color: #15161a;
   position: absolute;
   z-index: -1;
+  bottom: 0;
 }
 @-webkit-keyframes hideIt {
   from {
@@ -468,7 +465,7 @@ app-footer {
     display: flex;
   }
   .footer .show-settings .show-button__position {
-    position: relative;
+    position: static;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -506,11 +503,12 @@ app-footer {
   .footer .show-settings .showIt:focus::after {
     content: "";
     width: 35vw;
-    height: calc(18vw + 3px);
+    height: 18vw;
     border-top: 3px solid #0a0b0d;
     background-color: #15161a;
     position: absolute;
     z-index: -1;
+    bottom: 0;
   }
   @-webkit-keyframes showItt {
     from {
@@ -548,6 +546,7 @@ app-footer {
     background-color: #15161a;
     position: absolute;
     z-index: -1;
+    bottom: 0;
   }
   @-webkit-keyframes hideItt {
     from {
@@ -680,7 +679,7 @@ app-footer {
     display: flex;
   }
   .footer .show-settings .show-button__position {
-    position: relative;
+    position: static;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -718,11 +717,12 @@ app-footer {
   .footer .show-settings .showIt:focus::after {
     content: "";
     width: 25vw;
-    height: calc(15vw + 3px);
+    height: 15vw;
     border-top: 3px solid #0a0b0d;
     background-color: #15161a;
     position: absolute;
     z-index: -1;
+    bottom: 0;
   }
   @-webkit-keyframes showIttt {
     from {
@@ -760,6 +760,7 @@ app-footer {
     background-color: #15161a;
     position: absolute;
     z-index: -1;
+    bottom: 0;
   }
   @-webkit-keyframes hideIttt {
     from {
@@ -897,7 +898,7 @@ app-footer {
     display: flex;
   }
   .footer .show-settings .show-button__position {
-    position: relative;
+    position: static;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -935,11 +936,12 @@ app-footer {
   .footer .show-settings .showIt:focus::after {
     content: "";
     width: 20em;
-    height: calc(10em + 3px);
+    height: 10em;
     border-top: 3px solid #0a0b0d;
     background-color: #15161a;
     position: absolute;
     z-index: -1;
+    bottom: 0;
   }
   @-webkit-keyframes showItttt {
     from {
@@ -977,6 +979,7 @@ app-footer {
     background-color: #15161a;
     position: absolute;
     z-index: -1;
+    bottom: 0;
   }
   @-webkit-keyframes hideItttt {
     from {
@@ -1022,7 +1025,8 @@ app-footer {
 }
 .main-content {
   background-color: #2a2d36;
-  min-height: calc(100vh - 22vw - 20vw - 3px);
+  margin-top: 22vw;
+  min-height: calc(90vh - 22vw - 20vw - 3px);
   padding: 0 4vw;
 }
 .main-content .main-header h1.__position {
@@ -1211,8 +1215,9 @@ app-footer {
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
   .main-content {
+    margin-top: 18vw;
     background-color: #2a2d36;
-    min-height: calc(100vh - 18vw - 18vw - 3px);
+    min-height: calc(90vh - 18vw - 18vw - 3px);
     padding: 0 4vw;
   }
   .main-content .main-header h1.__position {
@@ -1362,8 +1367,9 @@ app-footer {
 }
 @media screen and (min-width: 992px) and (max-width: 1199px) {
   .main-content {
+    margin-top: 16vw;
     background-color: #2a2d36;
-    min-height: calc(100vh - 16vw - 15vw - 3px);
+    min-height: calc(90vh - 16vw - 15vw - 3px);
     padding: 0 4vw;
   }
   .main-content .main-header h1.__position {
@@ -1513,8 +1519,9 @@ app-footer {
 }
 @media screen and (min-width: 1200px) {
   .main-content {
+    margin-top: 10em;
     background-color: #2a2d36;
-    min-height: calc(100vh - 10em - 10em - 3px);
+    min-height: calc(90vh - 10em - 10em - 3px);
     padding: 0 2rem;
   }
   .main-content .main-header h1.__position {
